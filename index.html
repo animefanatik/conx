@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-	<meta charset="utf-8"> 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=500" />
-	<meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, tween, tweenmax" />
-	<meta name="author"	content="Jan Paepke (www.janpaepke.de)" />
-	<title>Animating with GSAP - Examples - ScrollMagic</title>
-
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/examples.css" type="text/css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-	<script type="text/javascript" src="js/lib/jquery.min.js"></script>	
-	<script type="text/javascript" src="js/lib/greensock/TweenMax.min.js"></script>
-	<script type="text/javascript" src="js/ScrollMagic.js"></script>
-	<script type="text/javascript" src="js/plugins/animation.gsap.min.js"></script>
-	<script type="text/javascript" src="js/plugins/debug.addIndicators.min.js"></script>
-</head>
+	<script src="js/lib/jquery.min.js"></script>	
+	<script src="js/lib/greensock/TweenMax.min.js"></script>
+	<script src="js/ScrollMagic.js"></script>
+	<script src="js/plugins/animation.gsap.min.js"></script>
+	<script src="js/plugins/debug.addIndicators.min.js"></script>
 <style>
 	#inicio, #final {height: 100vh; display: flex; align-items: center;}
 	.scrollContent {background: url('../img/background.png') top center no-repeat;}
-	.scrollContent section { text-align: center;}
+	.scrollContent section { text-align: center; overflow: hidden;}
+	#live {height: 3190px;}
+
 
 @keyframes rotate {
     from{transform: rotate(0deg);}
@@ -35,30 +31,41 @@
     40%{left: -20%;}
 }
 
-#rueda {
-    width:400px; height:400px; position: relative; top:15px; left: calc(50% - 885px);
-    background:url('../img/ferris.svg') no-repeat;
-    animation: rotate 25s linear infinite;
+@keyframes dune {
+	0% {transform:translate(calc(50% - 300px),0px) rotate(-360deg);}
+	10%, 100% {transform:translate(calc(50% + 2000px),0px) rotate(360deg);}
 }
- #tower{width:232px; height:269px; background:url('../img/tower.svg') no-repeat; position: relative; top:480px; left: calc(50% - 800px);}
- #sportcar {width:198px; height:47px; background:url('../img/sportcar.svg') no-repeat; position: relative; top:-346px; left: -100%;
- 	animation: leftToRight 25s linear infinite;
- }
- #carroviejo {width:409.48px; height:102.66px; background: url('../img/carroviejo.svg')no-repeat; position: relative; top:-423px; left: 0px;}
- #pawnshop {width:698.57px; height:471.49px; background: url('../img/pawnshop.png')no-repeat; position: relative; top: -399px; left:calc(50% + 20px);}
 
+#rueda {width:400px; height:400px; position: relative; top:25px; left: calc(50% - 885px); background:url('../img/ferris.svg') no-repeat;
+    animation: rotate 25s linear infinite;}
+#sportcar {width:198px; height:47px; background:url('../img/sportcar.svg') no-repeat; position: relative; top:-305px; left: -100%;
+ 	animation: leftToRight 25s linear infinite;}
+#dune {width:158.96px; height:137.95px; background:url('../img/dune.png') no-repeat; position: relative; top:-230px;
+ 	animation: dune 120s linear infinite;}
+
+#tower{width:232px; height:269px; background:url('../img/tower.svg') no-repeat; position: relative; top:490px; left: calc(50% - 800px);}
+#carroviejo {width:409.48px; height:102.66px; background: url('../img/carroviejo.svg')no-repeat; position: relative; top:-382px; left: 0px;}
+#pawnshop {width:698.57px; height:471.49px; background: url('../img/pawnshop.png')no-repeat; position: relative; top: -360px; left:calc(50% + 20px);}
+#goku {width:160.33px; height:100.59px; position: relative; top:-225px; left:100%; background:url('../img/goku.png') no-repeat; background-size: contain;}
+#ship {width:555.03px; height:297.30px; position: relative; top:145px; left:calc(50% - 605px); background:url('../img/ship.svg') no-repeat;}
+#shipshadow {width:555.03px; height:297.30px; position: relative; top:145px; left:calc(50% - 605px); background:url('../img/shipshadow.svg') no-repeat;}
+#fogR {width:161.22px; height:126.50px; position: relative; top:-195px; left:calc(50% - 50px); background:url('../img/fogR.png') no-repeat;}
+#fogL {width:148.33px; height:91.55px; position: relative; top:-305px; left:calc(50% - 770px); background:url('../img/fogL.png') no-repeat;}
+#alina {width:197.66px; height:341.75px; position: relative; top:165px; left:calc(50% + 282px); background:url('../img/alina.png') no-repeat;}
 </style>
+</head>
 <body>
 	<div id="content-wrapper">
 		<section id="inicio">
-			<div>Pagina inicial</div>
+			<h2>Pagina inicial</h2>
 		</section>
 		<div class="scrollContent">
 			<script>
 				// init controller
 				var controller = new ScrollMagic.Controller();
 			</script>
-			<section id="vegas">
+			<section id="live">
+				<h3>Invitados Internacionales</h3>
 				<div id="ferris">
 					<div id="tower"></div>
 					<div id="rueda"></div>
@@ -67,19 +74,44 @@
 				<div id="pawnshop"></div>
 				<div id="carroviejo"></div>
 				<div id="goku"></div>
+				<div id="freezer"></div>
 				<div id="ship"></div>
 				<div id="shipshadow"></div>
 				<div id="fogR"></div>
 				<div id="fogL"></div>
 				<div id="dune"></div>
-				<style>
-					#pin {display: block; background: #000; color: #FFF; width: 150px; text-align: center; margin: auto;}
-				</style>
+				<div id="alina"></div>
 				<script>
-					var scene = new ScrollMagic.Scene({triggerElement: "#carroviejo", duration: 100})
-					.setTween("#carroviejo", 0.5, {translate: 200px}) // trigger a TweenMax.to tween
-					.addIndicators({name: "2 (duration: 500)"}) // add indicators (requires plugin)
+					var scene = new ScrollMagic.Scene({triggerElement: "#pawnshop", duration: 1200})
+					.setTween("#carroviejo", 1, {left:'100%'})
 					.addTo(controller);
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 1200})
+					.setTween("#goku", 1, {left:'0%', width:'10px'})
+					.addTo(controller);
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#freezer", duration: 250})
+					.setTween(TweenMax.fromTo("#ship", 1, {top: "0px", opacity: 0}, {top: "145px", opacity: 1} ))
+					.addTo(controller);
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#freezer", duration: 250})
+					.setTween(TweenMax.fromTo("#shipshadow", 1, {opacity: 0.2}, {opacity: 1, delay: 20} ))
+					.addTo(controller);
+
+					var freezer = new TimelineMax({repeat: 1, yoyo: false})
+                    .add(TweenMax.fromTo(["#fogR", "#fogL" ], 1, {opacity: 0}, {opacity: 0.5, delay: 30}))
+                    .add(TweenMax.fromTo(["#fogR", "#fogL" ], 1, {opacity: 1}, {opacity: 0, delay:10}))
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#freezer", duration: 400})
+					.setTween(freezer)
+					.addIndicators({name: "fog (duration: 400)"}) // add indicators (requires plugin)
+					.addTo(controller);
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#alina", duration: 200})
+					.setTween(TweenMax.fromTo("#alina", 1, {opacity: 0}, {opacity: 1} ))
+					.addIndicators({name: "alina (duration: 200)"}) // add indicators (requires plugin)
+					.addTo(controller);
+
 
 				</script>					
 			</section>						
