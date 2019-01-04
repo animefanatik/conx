@@ -7,43 +7,50 @@
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/examples.css" type="text/css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet">
 	<script src="js/lib/jquery.min.js"></script>	
 	<script src="js/lib/greensock/TweenMax.min.js"></script>
 	<script src="js/ScrollMagic.js"></script>
 	<script src="js/plugins/animation.gsap.min.js"></script>
 	<script src="js/plugins/debug.addIndicators.min.js"></script>
-<style>
-	body {font-family: 'Alegreya Sans', sans-serif; font-size: 18px;}
-	#inicio, #final {height: 100vh; display: flex; align-items: center;}
-	#live {background: url('../img/background.png') center 40px no-repeat; height: 3190px;}
-	#live h3 {color: #FFF; font-size: 30px; display: block; margin: 0; background-color: cadetblue;}
-	.scene { text-align: center; overflow: hidden;}
+	<style>
+		body {font-family: 'Alegreya Sans', sans-serif; font-size: 18px;}
+		#inicio, #final {height: 100vh; display: flex; align-items: center;}
+		#chum {background: url('../img/background.png') center top no-repeat; height: 965px;}
+		.scene { text-align: center; overflow: hidden;}
+		#artInt {color: #FFF; font-size: 30px; display: block; margin: 0; background-color: cadetblue;}
+		
+		#tower{width:232px; height:269px; background:url('../img/tower.svg') no-repeat; position: relative; top:490px; left: calc(50% - 800px);}
+		#carroviejo {width:409.48px; height:102.66px; background: url('../img/carroviejo.svg')no-repeat; position: relative; top:-725px; left: 0px;}
+		#pawnshop {width:698.57px; height:471.49px; background: url('../img/pawnshop.png')no-repeat; position: relative; top: -360px; left:calc(50% + 20px);}
+		#goku {width:160.33px; height:100.59px; position: relative; top:-225px; left:100%; background:url('../img/goku.png') no-repeat; background-size: contain;}
+		#ship {width:555.03px; height:297.30px; position: relative; top:-145px; left:calc(50% - 605px); background:url('../img/ship.svg') no-repeat;}
+		#shipshadow {width:555.03px; height:297.30px; position: relative; top:405px; left:calc(50% - 605px); background:url('../img/shipshadow.svg') no-repeat;}
+		#fogR {width:161.22px; height:126.50px; position: relative; top:-195px; left:calc(50% - 50px); background:url('../img/fogR.png') no-repeat;}
+		#fogL {width:148.33px; height:91.55px; position: relative; top:-305px; left:calc(50% - 770px); background:url('../img/fogL.png') no-repeat;}
+		#alina {width:197.66px; height:341.75px; position: relative; top:165px; left:calc(50% + 282px); background:url('../img/alina.png') no-repeat;}
+		#chumlee {position: relative; top:-740px; left:calc(50% - 400px);}
+		.pop {background: #0078B5; color: #FFF; font-size: 16px; font-weight: 300; display: flex; align-items: center; text-align: left; width: 500px; border-radius: 25px; padding: 20px;}
+		.pop img {flex-shrink: 0; border: 1px solid #FFF; margin-right: 20px;}
+		.pop h2 {font-size: 26px;  font-weight: 700; margin: 0 0 15px;}
+		.pop p {margin: 0;}
+		.pop span {display: flex; margin-top: 20px; flex-direction: row; justify-content: space-evenly;}
+		.pop a {display: block; background: url('../img/icons.png') no-repeat; height: 40px; width: 40px;}
 
-@keyframes rotate {from{transform: rotate(0deg);} to{transform: rotate(360deg);}}
-@keyframes leftToRight {0%{left: 100%;} 40%{left: -20%;}}
-@keyframes dune {0% {transform:translate(calc(50% - 300px),0px) rotate(-360deg);} 10%, 100% {transform:translate(calc(50% + 2000px),0px) rotate(360deg);}}
 
-#rueda {width:400px; height:400px; position: relative; top:25px; left: calc(50% - 885px); background:url('../img/ferris.svg') no-repeat;
-    animation: rotate 25s linear infinite;}
-#sportcar {width:198px; height:47px; background:url('../img/sportcar.svg') no-repeat; position: relative; top:-305px; left: -100%;
- 	animation: leftToRight 25s linear infinite;}
-#dune {width:158.96px; height:137.95px; background:url('../img/dune.png') no-repeat; position: relative; top:-230px;
- 	animation: dune 120s linear infinite;}
 
-#tower{width:232px; height:269px; background:url('../img/tower.svg') no-repeat; position: relative; top:490px; left: calc(50% - 800px);}
-#carroviejo {width:409.48px; height:102.66px; background: url('../img/carroviejo.svg')no-repeat; position: relative; top:-382px; left: 0px;}
-#pawnshop {width:698.57px; height:471.49px; background: url('../img/pawnshop.png')no-repeat; position: relative; top: -360px; left:calc(50% + 20px);}
-#goku {width:160.33px; height:100.59px; position: relative; top:-225px; left:100%; background:url('../img/goku.png') no-repeat; background-size: contain;}
-#ship {width:555.03px; height:297.30px; position: relative; top:-145px; left:calc(50% - 605px); background:url('../img/ship.svg') no-repeat;}
-#shipshadow {width:555.03px; height:297.30px; position: relative; top:405px; left:calc(50% - 605px); background:url('../img/shipshadow.svg') no-repeat;}
-#fogR {width:161.22px; height:126.50px; position: relative; top:-195px; left:calc(50% - 50px); background:url('../img/fogR.png') no-repeat;}
-#fogL {width:148.33px; height:91.55px; position: relative; top:-305px; left:calc(50% - 770px); background:url('../img/fogL.png') no-repeat;}
-#alina {width:197.66px; height:341.75px; position: relative; top:165px; left:calc(50% + 282px); background:url('../img/alina.png') no-repeat;}
-#chumlee {position: relative; top:-740px; left:calc(50% - 400px);}
-.pop {width: 350px; color: #FFF; background: #000;}
+		@keyframes rotate {from{transform: rotate(0deg);} to{transform: rotate(360deg);}}
+		@keyframes leftToRight {0%{left: 100%;} 40%{left: -20%;}}
+		@keyframes dune {0% {transform:translate(calc(50% - 300px),0px) rotate(-360deg);} 10%, 100% {transform:translate(calc(50% + 2000px),0px) rotate(360deg);}}
 
-</style>
+		#rueda {width:400px; height:400px; position: relative; top:25px; left: calc(50% - 885px); background:url('../img/ferris.svg') no-repeat;
+			animation: rotate 25s linear infinite;}
+		#sportcar {width:198px; height:47px; background:url('../img/sportcar.svg') no-repeat; position: relative; top:-310px; left: -100%;
+			animation: leftToRight 25s linear infinite;}
+		#dune {width:158.96px; height:137.95px; background:url('../img/dune.png') no-repeat; position: relative; top:-230px;
+			animation: dune 120s linear infinite;}
+
+	</style>
 </head>
 <body>
 	<div id="content-wrapper">
@@ -55,8 +62,7 @@
 				// init controller
 				var controller = new ScrollMagic.Controller();
 			</script>
-			<div id="live" class="scene">
-				<h3>Invitados Internacionales</h3>
+			<div id="chum" class="scene">
 				<div id="ferris">
 					<div id="tower"></div>
 					<div id="rueda"></div>
@@ -64,9 +70,38 @@
 				<div id="sportcar"></div>
 				<div id="pawnshop"></div>
 				<div id="chumlee" class="pop">
-					Esta es una ventana donde aparece la informacion de Chumlee.
+					<img src="https://placeimg.com/214/291/people" alt="jjjs">
+					<div>
+						<h2>Austin "Chumlee" Russell</h2>
+						<p>Conocido por su pariticpacion en laLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+						<span>
+							<a href="#" class="face"></a>
+							<a href="#" class="inst"></a>
+							<a href="#" class="twit"></a>
+							<a href="#" class="tube"></a>
+						</span>
+					</div>
 				</div>
 				<div id="carroviejo"></div>
+				<script>
+					var reveal = new TimelineMax()
+						.add([
+							TweenMax.fromTo("#chumlee", 0.4, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
+							TweenMax.to("#carroviejo", 1, {left: "100%", delay:0.4})
+							]);
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration: 1200})
+						.setTween(reveal)
+						.addIndicators({name: "chum (duration: 1200)"}) // add indicators (requires plugin)
+//						.reverse (false)
+						.addTo(controller);
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#alina", duration: 200})
+						.setTween(TweenMax.fromTo("#alina", 1, {opacity: 0}, {opacity: 1} ))
+						.addTo(controller);
+				</script>					
+			</div>
+			<div id="freezer" class="scene">
 				<div id="goku"></div>
 				<div id="freezer"></div>
 				<div id="shipshadow"></div>
@@ -74,43 +109,29 @@
 				<div id="fogR"></div>
 				<div id="fogL"></div>
 				<div id="dune"></div>
-				<div id="alina"></div>
 				<script>
-
-                var reveal = new TimelineMax()
-                    .add([
-						TweenMax.fromTo("#chumlee", 0.4, {left:"100%", opacity:0}, {left:"28%", opacity:1}),
-						TweenMax.to("#carroviejo", 1, {left: "100%", delay:0.4})
-                        ]);
-
-					var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration: 1200})
-					.setTween(reveal)
-					.addIndicators({name: "chum (duration: 1200)"}) // add indicators (requires plugin)
-					.addTo(controller);
-
 					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 1200})
-					.setTween("#goku", 1, {left:'0%', width:'10px'})
-					.addTo(controller);
-
+						.setTween("#goku", 1, {left:'0%', width:'10px'})
+						.reverse (false)
+						.addTo(controller);
 					
 					var freezer = new TimelineMax()
 						.add([
-								TweenMax.fromTo("#ship", 150, {top: "-405px", opacity: 0}, {top: "-145px", opacity: 1}),
-								TweenMax.fromTo("#shipshadow", 30, {opacity: 0.2}, {opacity: 1, delay: 50}),
-								TweenMax.fromTo(["#fogR", "#fogL" ], 1, {opacity: 0}, {opacity: 0.5, delay:80}),					
-								TweenMax.fromTo(["#fogR", "#fogL" ], 1, {opacity: 0.5}, {opacity: 0, delay:150})
+							TweenMax.fromTo("#ship", 150, {top: "-405px", opacity: 0}, {top: "-145px", opacity: 1}),
+							TweenMax.fromTo("#shipshadow", 30, {opacity: 0.2}, {opacity: 1, delay: 50}),
+							TweenMax.fromTo(["#fogR", "#fogL" ], 1, {opacity: 0}, {opacity: 0.5, delay:80}),					
+							TweenMax.fromTo(["#fogR", "#fogL" ], 1, {opacity: 0.5}, {opacity: 0, delay:150})
 							]);
 
 					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 700})
-					.setTween(freezer)
-					.addTo(controller);
-
-					var scene = new ScrollMagic.Scene({triggerElement: "#alina", duration: 200})
-					.setTween(TweenMax.fromTo("#alina", 1, {opacity: 0}, {opacity: 1} ))
-					.addTo(controller);
-				</script>					
-			</div>						
-			<section>
+						.setTween(freezer)
+						.addTo(controller);
+				</script>
+			</div>
+			<div id="mex" class="scene">
+				<div id="alina"></div>
+			</div>				
+			<div>
 				<div class="spacer s2"></div>
 				<div id="trigger1" class="spacer s0"></div>
 				<div id="animate1" class="box2 skin">
@@ -125,7 +146,7 @@
 						.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
 						.addTo(controller);
 				</script>
-			</section>
+			</div>
 			<section>
 				<div class="spacer s1"></div>
 				<div id="trigger2" class="spacer s1"></div>
