@@ -12,24 +12,23 @@ function resNav() {
 
 $(document).on('ready', function() {
 	$(".carousel" ).slick({
-        dots: true,
-        accessibility: true,
+        accessibility: false,
         adaptiveHeight: true,        
         infinite: true,
         speed: 700,
         centerMode: true,
-        centerPadding: '50px',
+//        centerPadding: '50px',
         variableWidth: true,
-        slidesToShow: 3,
+//        slidesToShow: 1,
         slidesToScroll: 1,
-        draggable: true,
+//        draggable: true,
         initialSlide: 1,
         mobileFirst: false,
             responsive: [
         {
             breakpoint: 1105,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 infinite: true,
                 dots: false
