@@ -48,7 +48,11 @@
 		.pop h2 {font-size: 26px;  font-weight: 700; margin: 0 0 15px;}
 		.pop p {margin: 0;}
 		.pop span {display: flex; margin-top: 20px; flex-direction: row; justify-content: space-evenly;}
-		.pop a {display: block; background: url('../img/icons.png') no-repeat; height: 40px; width: 40px;}
+		.pop a {display: block; height: 35px; width: 35px; }
+		.pop .face {background: url('../img/facebook.svg') center no-repeat;}
+		.pop .inst {background: url('../img/instagram.svg') center no-repeat;}
+		.pop .twit {background: url('../img/twitter.svg') center no-repeat;}
+		.pop .tube {background: url('../img/youtube.svg') center no-repeat;}
 		#wcslogo {width: 100%; max-width: 460px; margin-bottom: 50px; }
 		#wcs section {width: 100%; max-width: 960px; margin-bottom:50px; }
 
@@ -63,17 +67,17 @@
 		#dune {width:158.96px; height:137.95px; background:url('../img/dune.png') no-repeat; position: relative; top:115px;
 			animation: dune 90s linear infinite;}
 
-	/* Carousel Styles */
-	.slick-slider {width: 90%;}
-	.slick-prev {left: 0; z-index: 100; background: #94c318 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
-	.slick-next {right: 0; z-index: 100; background: #94c318 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
-	.slick-prev, .slick-next {
-		font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 50px; height: 100%; padding: 0; cursor: pointer; border: none; outline: none;
-		-webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%);
-	}
-	.slick-slide {margin: 0 10px;}
-	.slick-slide img {width: 100%;}
-	.slick-slide a {color: #000; text-decoration:none;}
+		/* Carousel Styles */
+		.slick-slider {width: 90%; background: #FFF;} 
+		.slick-prev {left: 0; z-index: 100; background: #94c318 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
+		.slick-next {right: 0; z-index: 100; background: #94c318 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
+		.slick-prev, .slick-next {
+			font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 50px; height: 100%; padding: 0; cursor: pointer; border: none; outline: none;
+			-webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%);
+		}
+		.slick-slide {margin: 0 10px;}
+		.slick-slide img {width: 100%;}
+		.slick-slide a {color: #000; text-decoration:none;}
 
 		.topnav {overflow:hidden; background-color:#333; width: 100%; position: fixed; top: 0; z-index: 1000;}
 		.topnav a {float:left; display:block; color:#f2f2f2; text-align:center; padding:14px 16px; text-decoration:none; font-size:17px;}
