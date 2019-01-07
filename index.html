@@ -7,18 +7,25 @@
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/examples.css" type="text/css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet">
-	<script src="js/lib/jquery.min.js"></script>	
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,700" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+	<link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="js/lib/greensock/TweenMax.min.js"></script>
 	<script src="js/ScrollMagic.js"></script>
 	<script src="js/plugins/animation.gsap.min.js"></script>
 	<script src="js/plugins/debug.addIndicators.min.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 	<style>
-		body {font-family: 'Alegreya Sans', sans-serif; font-size: 18px;}
+		body {font-family: 'Alegreya Sans', sans-serif; font-size: 18px; font-weight:300; }
+		strong {font-weight:500; }
 		#inicio, #final {height: 100vh; display: flex; align-items: center;}
 		#chum {background: url('../img/background.png') center top no-repeat; height: 965px;}
 		#freezer {background: url('../img/background.png') center -965px no-repeat; height: 1290px;}
-		#nicte {background: url('../img/background.png') center -2254px no-repeat; height: 935px;}
+		#nicte {background: url('../img/background.png') center -2254px no-repeat; height: 875px;}
+		#wcs {display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; text-align: center; padding: 100px 0;  background: url('../img/wcsback.jpg') fixed;}
 
 		.scene { text-align: center; overflow: hidden;}
 		#artInt {color: #FFF; font-size: 30px; display: block; margin: 0; background-color: cadetblue;}
@@ -34,12 +41,15 @@
 		#alina {width:197.66px; height:341.75px; position: relative; top:252px; left:calc(50% + 282px); background:url('../img/alina.png') no-repeat;}
 		#chumlee {position: relative; top:-740px; left:calc(50% - 400px);}
 		#reyero {position: relative; top:-500px; left:calc(50% - 400px);}
+		#infomex {position: relative; top:-80px; left:calc(50% - 550px);}
 		.pop {background: #0078B5; color: #FFF; font-size: 16px; font-weight: 300; display: flex; align-items: center; text-align: left; width: 500px; border-radius: 25px; padding: 20px;}
 		.pop img {flex-shrink: 0; border: 1px solid #FFF; margin-right: 20px;}
 		.pop h2 {font-size: 26px;  font-weight: 700; margin: 0 0 15px;}
 		.pop p {margin: 0;}
 		.pop span {display: flex; margin-top: 20px; flex-direction: row; justify-content: space-evenly;}
 		.pop a {display: block; background: url('../img/icons.png') no-repeat; height: 40px; width: 40px;}
+		#wcs img {width: 100%; max-width: 460px; margin-bottom: 50px; }
+		#wcs section {width: 100%; max-width: 960px;}
 
 		@keyframes rotate {from{transform: rotate(0deg);} to{transform: rotate(360deg);}}
 		@keyframes leftToRight {0%{left: 100%;} 40%{left: -20%;}}
@@ -52,10 +62,105 @@
 		#dune {width:158.96px; height:137.95px; background:url('../img/dune.png') no-repeat; position: relative; top:115px;
 			animation: dune 90s linear infinite;}
 
+	/* Carousel Styles */
+	.slick-prev {left: 75px; z-index: 100; background: #000 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
+	.slick-next {right: 75px; z-index: 100; background: #000 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
+	.slick-prev, .slick-next {
+		font-size: 0; line-height: 0; position: absolute; top: 45%; display: block; width: 50px; height: 50px; padding: 0; cursor: pointer; border: none; outline: none;
+		-webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%);
+	}
+	.slick-slide {margin: 0 10px;}
+	.slick-slide img {width: 100%;}
+	.slick-dots {margin: 0 auto; text-align: center;}
+	.slick-dots li {border: 0; height: 2px; width: 17%; margin: 20px 0px; display: inline-block; background:rgb(192, 192, 192);}
+	.slick-dots li button {width: 100%; border: 0px; font-size: 0; height: 2px; background: #FFF;}
+	.slick-dots li.slick-active {background: #666;}			
+
+		.topnav {overflow:hidden; background-color:#333; width: 100%; position: fixed; top: 0; z-index: 1000;}
+		.topnav a {float:left; display:block; color:#f2f2f2; text-align:center; padding:14px 16px; text-decoration:none; font-size:17px;}
+		.active {background-color:#0078B5; color:white;}
+		.topnav .icon {display: none;}
+		.dropdown {float: left;overflow: hidden;}
+		.dropdown .dropbtn {font-size: 17px; border: none; outline: none; color: white; padding: 14px 16px; background-color: inherit; font-family: inherit; margin: 0;}
+		.dropdown-content {display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+		.dropdown-content a {float: none; color: black; padding: 12px 16px; text-decoration: none; display: block; text-align: left;}
+		.topnav a:hover, .dropdown:hover .dropbtn {background-color: #555; color: white;}
+		.dropdown-content a:hover {background-color: #ddd; color: black;}
+		.dropdown:hover .dropdown-content {display: block;}
+
+		@media screen and (max-width: 600px) {
+			.topnav a:not(:first-child), .dropdown .dropbtn {display: none;}
+			.topnav a.icon {float: right;display: block;}
+		}
+		@media screen and (max-width: 600px) {
+			.topnav.responsive {position: relative;}
+			.topnav.responsive .icon {position: absolute; right: 0; top: 0;}
+			.topnav.responsive a {float: none; display: block; text-align: left;}
+			.topnav.responsive .dropdown {float: none;}
+			.topnav.responsive .dropdown-content {position: relative;}
+			.topnav.responsive .dropdown .dropbtn {display: block; width: 100%; text-align: left;}
+		}
 	</style>
 </head>
 <body>
+	<div class="topnav" id="myTopnav">
+		<a href="#home" class="active">Inicio</a>
+		<div class="dropdown">
+			<button class="dropbtn">Invitados 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="#">Austin Chumlee</a>
+				<a href="#">Warwick Davis</a>
+				<a href="#">Gerardo Reyero</a>
+				<a href="#">Alina Nicte</a>
+			</div>
+		</div> 
+		<div class="dropdown">
+			<button class="dropbtn">Expositores 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="#">Cosplayer</a>
+				<a href="#">Ilustradores</a>
+				<a href="#">Youtubers</a>
+			</div>
+		</div> 	
+		<div class="dropdown">
+			<button class="dropbtn">Actividades 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="#">Cosplay</a>
+				<a href="#">Kpop Party</a>
+				<a href="#">Stands</a>
+			</div>
+		</div> 	
+		<div class="dropdown">
+			<button class="dropbtn">Sobre el evento 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="#">Sede</a>
+				<a href="#">Accesos</a>
+				<a href="#">Mapa del evento</a>
+				<a href="#">¿Cómo llegar?</a>
+			</div>
+		</div> 	
+		<div class="dropdown">
+			<button class="dropbtn">Organización 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="#">Patrocinadores</a>
+				<a href="#">Prensa</a>
+				<a href="#">Contacto</a>
+			</div>
+		</div> 	
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
 	<div id="content-wrapper">
+		<nav></nav>
 		<section id="inicio">
 			<h2>Pagina inicial</h2>
 		</section>
@@ -136,18 +241,59 @@
 
 					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 900})
 						.setTween(freezer)
-						.addIndicators({name: "freexer (duration: 700)"}) // add indicators (requires plugin)
 						.addTo(controller);
 						
 				</script>
 			</div>
 			<div id="nicte" class="scene">
+				<div id="trigger"></div>
 				<div id="alina"></div>
+				<div id="infomex" class="pop">
+					<img src="https://placeimg.com/214/291/people" alt="jjjs">
+					<div>
+						<h2>Alina Nicte</h2>
+						<p>Conocido por su pariticpacion en laLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+						<span>
+							<a href="#" class="face"></a>
+							<a href="#" class="inst"></a>
+							<a href="#" class="twit"></a>
+							<a href="#" class="tube"></a>
+						</span>
+					</div>
+				</div>				
 				<script>
-					var scene = new ScrollMagic.Scene({triggerElement: "#alina", duration: 200})
-						.setTween(TweenMax.fromTo("#alina", 1, {opacity: 0}, {opacity: 1} ))
+
+					var alina = new TimelineMax()
+						.add([
+							TweenMax.fromTo("#infomex", 0.7, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
+							TweenMax.fromTo("#alina", 1, {opacity: 0}, {opacity: 1} ),
+							]);					
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 600})
+						.setTween(alina)
+						.addIndicators({name: "freexer (duration: 600)"}) // add indicators (requires plugin)
 						.addTo(controller);					
 				</script>			
+			</div>
+			<div id="wcs">
+				<img src="/img/logo-wcs.png" alt="World Cosplay Summit Costa Rica">
+				<section>
+					<h2>World Cosplay Summit, Costa Rica.</h2>
+					<p>Disfrute de la final nacional de WCS, el mejor concurso de cosplay en todo Costa Rica.</p>
+					<p>Más de 12 parejas, formadas por los mejores expositores del cosplay en nuestro país, se enfrentan para ganar un viaje totalmente gratis hasta Nagoya, Japón y representar a Costa Rica en la final del mundial, donde participarán junto a 40 países por ser los campeones del mundo.</p>
+					<p>Esta es una actividad llena de mucha emoción que se estará realizando en la tarima principal y será  abierta a todo el público asistente.</p>
+					<p><strong>No te pierdas de esta actividad y ven para apoyar a tus parejas favoritas.</strong></p>
+				</section>
+				
+				<div id="carrouselArea">
+					<h1>PROUD AT WHAT WE DO</h1>
+					<div class="carousel">
+						<div class="item"><img src="http://arteweb506.com/codeable/wp-content/themes/roughHands/img/1.png" alt="1"></div>
+						<div class="item"><img src="http://arteweb506.com/codeable/wp-content/themes/roughHands/img/2.png" alt="2"></div>
+						<div class="item"><img src="http://arteweb506.com/codeable/wp-content/themes/roughHands/img/3.png" alt="3"></div>
+						<div class="item"><img src="http://arteweb506.com/codeable/wp-content/themes/roughHands/img/4.png" alt="4"></div>
+				</div>
+			</div>
 			</div>				
 			<div>
 				<div class="spacer s2"></div>
