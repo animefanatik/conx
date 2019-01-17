@@ -20,7 +20,12 @@ $(document).on('ready', function() {
         variableWidth: true,
         slidesToScroll: 1,
         initialSlide: 1,
-    });  
+    });
+
+    $(".light").hover(function() {
+        $(this).parent().addClass( "turnOn" );
+      });
+
 });
 
 

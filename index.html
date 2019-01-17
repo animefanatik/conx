@@ -20,7 +20,7 @@
 	<style>
 		body {font-family: 'Alegreya Sans', sans-serif; font-size: 18px; font-weight:300; color: #fff;}
 		strong {font-weight:500;}
-		#inicio, #final {height: 100vh; display: flex; align-items: center;}
+		#inicio {height: 100vh; display: flex; align-items: center;}
 		#inicio {background: #081153 url('../img/centroconvenciones.jpg') bottom center no-repeat; background-size: contain;display: flex; flex-direction: column; align-items: center; justify-content: center;}
 		#inicio img {width: 100%; max-width:400px;}
 		#inicio h2 {font-weight:300; font-size: 38px; margin: 10px;}
@@ -55,16 +55,17 @@
 		.pop img {flex-shrink: 0; border: 1px solid #FFF; margin-right: 20px;}
 		.pop h2 {font-size: 26px;  font-weight: 700; margin: 0 0 15px;}
 		.pop p {margin: 0;}
-		.pop span {display: flex; margin-top: 20px; flex-direction: row; justify-content: space-around;}
-		.pop a {display: block; font-size: 35px; text-decoration: none; color: #FFF;font-weight: 300;}
+		.pop span, .socialLink {display: flex; margin-top: 20px; flex-direction: row; justify-content: center;}
+		.pop a {display: block; font-size: 35px; text-decoration: none; color: #FFF;font-weight: 300; margin: 0 10px;}
 		.pop .face {background: url('../img/facebook.svg') center no-repeat;}
 		.pop .inst {background: url('../img/instagram.svg') center no-repeat;}
 		.pop .twit {background: url('../img/twitter.svg') center no-repeat;}
 		.pop .tube {background: url('../img/youtube.svg') center no-repeat;}
 		#wcslogo {width: 100%; max-width: 460px; margin-bottom: 50px; }
-		#wcs section {width: 100%; max-width: 960px; margin-bottom:50px; }
-		#cosplay h2 {font-size: 50px; font-weight: 500; margin: 150px auto 75px; text-align: center; /*color: #ecd977;*/ }
-		#graficos {background:#6DC6EC;}
+		#wcs section {width: 100%; max-width: 960px; margin-bottom:50px;}
+		#cosplay {padding-bottom: 75px;}
+		#cosplay h2, #graficos h2 {font-size: 50px; font-weight: 500; margin: 75px auto 50px; text-align: center; /*color: #ecd977;*/ }
+		#graficos {background:#a4ddf3; border: 1px solid #a4ddf3;}
 
 		@keyframes rotate {from{transform: rotate(0deg);} to{transform: rotate(360deg);}}
 		@keyframes leftToRight {0%{left: 100%;} 40%{left: -20%;}}
@@ -104,8 +105,8 @@
 
 		#nav {position: fixed; width: 100%; z-index: 999;}
 		#nav ul {display: none; width: 100%; list-style: none; margin: 0px; padding: 0px;}
-		#nav ul li a {display: block; padding: 1em; background: #333; color: white; text-align:center; text-decoration: underline; font-weight:500; padding-top:25px;  }
-		#nav ul li a:hover {background: #0078B5;}
+		#nav ul li a {display: block; padding: 1em; background: #0078B5; color: white; text-align:center; text-decoration: underline; font-weight:500; }
+		#nav ul li a:hover {background: rgb(0, 83, 124);}
 		#nav ul li:last-of-type a {border-right: 0px;}
 		#nav ul li ul li a {text-align:center; /*padding: 0.5em 0em 0.5em 2.5em;*/ font-weight:300; text-decoration: none; padding: 4px;}
 		#nav input.trigger { position: absolute; top: -9999px; left: -9999px;}
@@ -123,53 +124,48 @@
 			#nav ul li ul li {text-align: left;}
 			#nav ul li:hover > ul {display: block !important;}
 			#nav label {display: none;}
+			#nav #lg a {padding: 4px 0 0;}
 		}
 	</style>
 </head>
 <body>
-	<nav role="navigation" id="nav">
+	<script>
+		// init controller
+		var controller = new ScrollMagic.Controller();
+	</script>	
+	<nav id="nav">
 		<input class="trigger" type="checkbox" id="mainNavButton">
 		<label for="mainNavButton" onclick>Menu</label>
 		<ul>
+			<li id="lg"><a href="#"><img src="/img/convencion-logo.png" alt="convencion anime comic"></a></li>
 			<li><a href="#">Inicio</a></li>
 			<li><a href="#">Invitados</a>
 				<ul>
 					<li><a href="#">Austin Chumlee</a></li>
-					<li><a href="#">Warwick Davis</a></li>
 					<li><a href="#">Gerardo Reyero</a></li>
 					<li><a href="#">Alina Nicte</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Expositores</a>
-				<ul>
 					<li><a href="#">Cosplayer</a></li>
-					<li><a href="#">Ilustradores</a></li>
-					<li><a href="#">Youtubers</a></li>
+					<li><a href="#">Ilustradores</a></li>					
 				</ul>
 			</li>
-			<li><a href="#">Actividades</a>
-				<ul>
-					<li><a href="#">Cosplay</a></li>
-					<li><a href="#">Kpop Party</a></li>
-					<li><a href="#">Stands</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Sobre Con-X</a>
-				<ul>
-					<li><a href="#">Sede</a></li>
-					<li><a href="#">Accesos</a></li>
-					<li><a href="#">Mapa del Evento</a></li>
-				</ul>			
-			</li>
-			<li><a href="#">Organización</a>
-				<ul>
-					<li><a href="#">Patrocinadores</a></li>
-					<li><a href="#">Prensa</a></li>
-					<li><a href="#">Contacto</a></li>
-				</ul>			
-			</li>
+			<li><a href="#">Actividades</a></li>
+			<li><a href="#">Stands</a></li>
+			<li><a href="#" id="up">Boletos</a></li>
+			<li><a href="#">Contacto</a></li>
 		</ul>
 	</nav>
+	<script>
+		var reveal = new TimelineMax()
+			.add([
+				TweenMax.fromTo("#chumlee", 0.4, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
+				TweenMax.to("#carroviejo", 1, {left: "100%", delay:0.4})
+				]);
+
+		var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration: 1200})
+			.setTween(reveal)
+//						.reverse (false)
+			.addTo(controller);
+	</script>
 
 	<div id="content-wrapper">
 		<nav></nav>
@@ -187,10 +183,6 @@
 			<div id="mainCredits">Con-X: Convención Geek y WCS Costa Rica son propiedad de <a href="#">Plus Ultra!</a></div>
 		</section>
 		<div class="scrollContent">
-			<script>
-				// init controller
-				var controller = new ScrollMagic.Controller();
-			</script>
 			<div id="chum" class="scene">
 				<div id="ferris">
 					<div id="tower"></div>
@@ -340,10 +332,96 @@
 						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
 						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
 				</div>
-
 			</div>
 			<div id="graficos">
-
+				<style>
+					#graficos h2 {color: #2bbae8;}
+					#arteWrap {display: flex; flex-direction: row; align-items: center; width: 95%; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; justify-content: center;}
+					.arte {margin: 25px 15px 25px;}
+					.marco {background: #7cd0ef; border: 12px solid #2bbae8; padding: 20px;}
+					.marco img {border: 6px solid #a4ddf3; filter: contrast(50%) brightness(50%);}
+					.turnOn .marco img {filter: contrast(100%) brightness(100%);}
+					.bulb {background: url('../img/bulb.png') 124px center no-repeat; height: 25px; width: 100%; position: relative; top: -388px;}
+					.light {background: url('../img/rect.svg') center no-repeat; opacity: 0.2; height: 250px; width: 100%; position: relative; top: -388px; margin-bottom: -230px;}
+					.light:hover {opacity: 1;}
+					.arte p {color: #000; font-weight: 500; margin: 15px; text-align: center;}
+					.socialLink {position: relative; top:-65px; }
+					.socialLink a {color: #2bbae8; text-decoration: none; margin: 0 10px; font-size: 24px;}
+					.socialLink a:hover {color: #e1f7ff;}
+				</style>
+				<h2>Artistas Gráficos</h2>
+				<div id="arteWrap">
+					<div class="arte">
+						<div class="marco">
+							<img src="/img/comic.jpg" alt="comic">
+						</div>
+						<p>Fulano de tal</p>
+						<div class="bulb"></div>
+						<div class="light"></div>
+						<div class="socialLink">
+							<a href="#" class="fab fa-facebook-square"></a>
+							<a href="#" class="fab fa-instagram"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-youtube"></a>
+						</div>
+					</div>
+					<div class="arte">
+						<div class="marco">
+							<img src="/img/comic.jpg" alt="comic">
+						</div>
+						<p>Fulano de tal</p>
+						<div class="bulb"></div>
+						<div class="light"></div>
+						<div class="socialLink">
+							<a href="#" class="fab fa-facebook-square"></a>
+							<a href="#" class="fab fa-instagram"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-youtube"></a>
+						</div>
+					</div>
+					<div class="arte">
+						<div class="marco">
+							<img src="/img/comic.jpg" alt="comic">
+						</div>
+						<p>Fulano de tal</p>
+						<div class="bulb"></div>
+						<div class="light"></div>
+						<div class="socialLink">
+							<a href="#" class="fab fa-facebook-square"></a>
+							<a href="#" class="fab fa-instagram"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-youtube"></a>
+						</div>
+					</div>
+					<div class="arte">
+						<div class="marco">
+							<img src="/img/comic.jpg" alt="comic">
+						</div>
+						<p>Fulano de tal</p>
+						<div class="bulb"></div>
+						<div class="light"></div>
+						<div class="socialLink">
+							<a href="#" class="fab fa-facebook-square"></a>
+							<a href="#" class="fab fa-instagram"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-youtube"></a>
+						</div>
+					</div>
+					<div class="arte">
+						<div class="marco">
+							<img src="/img/comic.jpg" alt="comic">
+						</div>
+						<p>Fulano de tal</p>
+						<div class="bulb"></div>
+						<div class="light"></div>
+						<div class="socialLink">
+							<a href="#" class="fab fa-facebook-square"></a>
+							<a href="#" class="fab fa-instagram"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-youtube"></a>
+						</div>
+					</div>					
+				</div>
 			</div>
 		</div>
 		<div id="final"></div>
