@@ -102,8 +102,22 @@
 		.cosplayStars .slick-slide:nth-child(odd) img {margin-top: 195px;}
 		.cosplayStars .slick-slide p {position: relative; top: -30px; right: 10%; text-align: end; font-size: 14px; font-weight: 500;}
 
+		#graficos h2 {color: #2bbae8;}
+		#arteWrap {display: flex; flex-direction: row; align-items: center; width: 95%; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; justify-content: center;}
+		.arte {margin: 25px 15px 25px;}
+		.marco {background: #7cd0ef; border: 12px solid #2bbae8; padding: 20px;}
+		.marco img {border: 6px solid #a4ddf3; filter: contrast(50%) brightness(50%);}
+		.turnOn .marco img {filter: contrast(100%) brightness(100%);}
+		.bulb {background: url('../img/bulb.png') 124px center no-repeat; height: 25px; width: 100%; position: relative; top: -388px;}
+		.light {background: url('../img/rect.svg') center no-repeat; opacity: 0.2; height: 250px; width: 100%; position: relative; top: -388px; margin-bottom: -230px;}
+		.light:hover {opacity: 1;}
+		.arte p {color: #000; font-weight: 500; margin: 15px; text-align: center;}
+		.socialLink {position: relative; top:-65px; }
+		.socialLink a {color: #2bbae8; text-decoration: none; margin: 0 10px; font-size: 24px;}
+		.socialLink a:hover {color: #e1f7ff;}
 
-		#nav {position: fixed; width: 100%; z-index: 999;}
+
+		#nav {position: fixed; width: 100%; z-index: 999; opacity: 0;}
 		#nav ul {display: none; width: 100%; list-style: none; margin: 0px; padding: 0px;}
 		#nav ul li a {display: block; padding: 1em; background: #0078B5; color: white; text-align:center; text-decoration: underline; font-weight:500; }
 		#nav ul li a:hover {background: rgb(0, 83, 124);}
@@ -155,24 +169,22 @@
 		</ul>
 	</nav>
 	<script>
-		var reveal = new TimelineMax()
+		var navi = new TimelineMax()
 			.add([
-				TweenMax.fromTo("#chumlee", 0.4, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
-				TweenMax.to("#carroviejo", 1, {left: "100%", delay:0.4})
+				
 				]);
 
-		var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration: 1200})
-			.setTween(reveal)
-//						.reverse (false)
+		var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration:0})
+			.setTween(navi)
+//			.setPin("#nav")
 			.addTo(controller);
 	</script>
 
 	<div id="content-wrapper">
-		<nav></nav>
 		<section id="inicio">
-			<img src="/img/conx-logo.png" alt="convención anime y comic costa rica">
+			<img id="conxLog" src="/img/conx-logo.png" alt="convención anime y comic costa rica">
 			<h2>Convención de Cultura Geek</h2>
-			<p>Domingo 5 de Mayo - 10am<br>Centro Nacional de Convenciones<br>San José, Costa Rica</p>
+			<p>Domingo 5 de Mayo - 10am<br>Centro de Convenciones de Costa Rica<br>San José, Costa Rica</p>
 			<div id="mainSocial">
 				<a href="#" class="fab fa-facebook-square"></a>
 				<a href="#" class="fab fa-instagram"></a>
@@ -194,7 +206,7 @@
 					<img src="https://placeimg.com/214/291/people" alt="jjjs">
 					<div>
 						<h2>Austin "Chumlee" Russell</h2>
-						<p>Conocido por su pariticpacion en laLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+						<p>Famoso por el show: <b>"El precio de la Historia"</b> de History Channel, es uno de los empleados y quizás el personaje más carismático de "Gold & Silver Pawn Shop" en Las Vegas. Su fama también lo ha convertido en uno de los meme más conocidos debido a la frase: "No lo sé Rick, parece falso." la cual en realidad nunca fue usada en la TV.</p>
 						<span>
 							<a href="#" class="fab fa-facebook-square"></a>
 							<a href="#" class="fab fa-instagram"></a>
@@ -208,7 +220,8 @@
 					var reveal = new TimelineMax()
 						.add([
 							TweenMax.fromTo("#chumlee", 0.4, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
-							TweenMax.to("#carroviejo", 1, {left: "100%", delay:0.4})
+							TweenMax.to("#carroviejo", 1, {left: "100%", delay:0.4}),
+							TweenMax.fromTo("#nav", 10, {opacity: 0}, {opacity: 1})
 							]);
 
 					var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration: 1200})
@@ -228,7 +241,7 @@
 					<img src="https://placeimg.com/214/291/people" alt="jjjs">
 					<div>
 						<h2>Gerardo Reyero</h2>
-						<p>Conocido por su pariticpacion en laLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+						<p>Freezer uno de los villanos más poderosos de la serie Dragon Ball llega Costa Rica para conquistar el corazón de todos los asistentes a Con-X. Ven a disfrutar de un show espectacular a corgo de Gerardo Reyero, la voz oficial de Freezar y muchos otros personajes del cine y la Televisión como Ash Williams, Tuxedo Mask, Meta Knight, Capitanazo, Gardfield, Hellboy, Jarvan IV entre muchos más.</p>
 						<span>
 							<a href="#" class="fab fa-facebook-square"></a>
 							<a href="#" class="fab fa-instagram"></a>
@@ -266,7 +279,7 @@
 					<img src="https://placeimg.com/214/291/people" alt="jjjs">
 					<div>
 						<h2>Alina Nicte</h2>
-						<p>Conocido por su pariticpacion en laLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+						<p>Desde México nos visita una animadora y locutora que se ha ganado el corazón de los aficionados en Costa Rica, no solo por su voz y sus canciones, si no también por el carisma y su forma tan especial de animar los eventos donde participa. Alina será la voz oficial de la final nacional de World Cosplay Summit y estará compartiendo el escenario junto a nuevos animadores costarricenses que se presentan en Con-X.</p>
 						<span>
 							<a href="#" class="fab fa-facebook-square"></a>
 							<a href="#" class="fab fa-instagram"></a>
@@ -293,10 +306,11 @@
 				<img id="wcslogo" src="/img/logo-wcs.png" alt="World Cosplay Summit Costa Rica">
 				<section>
 					<h2>World Cosplay Summit, Costa Rica.</h2>
-					<p>Disfrute de la final nacional de WCS, el mejor concurso de cosplay en todo Costa Rica.</p>
-					<p>Más de 12 parejas, formadas por los mejores expositores del cosplay en nuestro país, se enfrentan para ganar un viaje totalmente gratis hasta Nagoya, Japón y representar a Costa Rica en la final del mundial, donde participarán junto a 40 países por ser los campeones del mundo.</p>
-					<p>Esta es una actividad llena de mucha emoción que se estará realizando en la tarima principal y será  abierta a todo el público asistente.</p>
-					<p><strong>No te pierdas de esta actividad y ven para apoyar a tus parejas favoritas.</strong></p>
+					<h3>16<span>Parejas</span></h3>
+					<p>Disfrute del concurso de cosplay más impresionate en la historia de nuestro país.</p>
+					<p>Los mejores expositores del cosplay costarricense, se enfrentan para ganar su pase hasta Nagoya, Japón y representar a Costa Rica en la final del mundial de World Cosplay Summit junto a otros 40 paises.</p>
+					<p>¡Esta será una actividad llena de emociones!.</p>
+					<p><strong>No te pierdas de WCS y ven para apoyar a tus parejas favoritas.</strong></p>
 				</section>
 				<div class="carousel">
 					<div><a href="/img/foto/south-africa.jpg" data-lightbox="cosplay"><img src="/img/th-south-africa.jpg" alt="South Africa"><span>Team Sudáfrica 2018</span></a></div>
@@ -334,21 +348,6 @@
 				</div>
 			</div>
 			<div id="graficos">
-				<style>
-					#graficos h2 {color: #2bbae8;}
-					#arteWrap {display: flex; flex-direction: row; align-items: center; width: 95%; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; justify-content: center;}
-					.arte {margin: 25px 15px 25px;}
-					.marco {background: #7cd0ef; border: 12px solid #2bbae8; padding: 20px;}
-					.marco img {border: 6px solid #a4ddf3; filter: contrast(50%) brightness(50%);}
-					.turnOn .marco img {filter: contrast(100%) brightness(100%);}
-					.bulb {background: url('../img/bulb.png') 124px center no-repeat; height: 25px; width: 100%; position: relative; top: -388px;}
-					.light {background: url('../img/rect.svg') center no-repeat; opacity: 0.2; height: 250px; width: 100%; position: relative; top: -388px; margin-bottom: -230px;}
-					.light:hover {opacity: 1;}
-					.arte p {color: #000; font-weight: 500; margin: 15px; text-align: center;}
-					.socialLink {position: relative; top:-65px; }
-					.socialLink a {color: #2bbae8; text-decoration: none; margin: 0 10px; font-size: 24px;}
-					.socialLink a:hover {color: #e1f7ff;}
-				</style>
 				<h2>Artistas Gráficos</h2>
 				<div id="arteWrap">
 					<div class="arte">
