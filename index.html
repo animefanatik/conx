@@ -92,17 +92,17 @@
 		.slick-slide img {width: 100%;}
 		.slick-slide a {color: #000; text-decoration:none;}
 
-		.stars {background:#000 url('../img/stars.png') repeat top center;z-index:-9999;}
+		.stars {background:#5098db url('../img/stars.png') repeat top center;z-index:-9999;}
 		.twinkling{background:transparent url('../img/twinkling.png') repeat top center; z-index:-9999; animation:move-twink-back 200s linear infinite;}
 
 		.cosplayStars.slick-slider {background: none; margin: 0 auto;}
-		.cosplayStars .slick-prev {background: #000 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
-		.cosplayStars .slick-next {background: #000 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
+		.cosplayStars .slick-prev {background: #5098db url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
+		.cosplayStars .slick-next {background: #5098db url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
 		.cosplayStars .slick-slide {margin: 0 45px; height: 465px; }
 		.cosplayStars .slick-slide:nth-child(odd) img {margin-top: 195px;}
 		.cosplayStars .slick-slide p {position: relative; top: -30px; right: 10%; text-align: end; font-size: 14px; font-weight: 500;}
 
-		#graficos h2 {color: #2bbae8;}
+		#graficos h2 {color: #FFF}
 		#arteWrap {display: flex; flex-direction: row; align-items: center; width: 95%; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; justify-content: center;}
 		.arte {margin: 25px 15px 25px;}
 		.marco {background: #7cd0ef; border: 12px solid #2bbae8; padding: 20px;}
@@ -168,18 +168,6 @@
 			<li><a href="#">Contacto</a></li>
 		</ul>
 	</nav>
-	<script>
-		var navi = new TimelineMax()
-			.add([
-				
-				]);
-
-		var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration:0})
-			.setTween(navi)
-//			.setPin("#nav")
-			.addTo(controller);
-	</script>
-
 	<div id="content-wrapper">
 		<section id="inicio">
 			<img id="conxLog" src="/img/conx-logo.png" alt="convención anime y comic costa rica">
@@ -327,7 +315,7 @@
 			</div>
 			<div id="cosplay">
 				<div class="stars"></div>
-				<div class="twinkling"></div>
+				<!--<div class="twinkling"></div>-->
 				<h2>Cosplay Rising Stars</h2>
 				<div class="cosplayStars">
 						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
