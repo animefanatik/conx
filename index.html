@@ -20,7 +20,7 @@
 	<style>
 		body {font: 300 18px 'Alegreya Sans'; color: #fff;}
 		strong {font-weight:500;}
-		#inicio {height: 100vh; background: #0078b5 url('../img/convencion-comic.jpg') 0px 110px no-repeat; background-size: contain;}
+		#inicio {height: 100vh; background: #0078b5 url('../img/convencion-comic.jpg') center bottom no-repeat; background-size: contain;}
 		#logoSec {display: flex; flex-direction: column; align-items: center; justify-content: center; width: 460px; position: relative; top: calc(50% + -43vh); left: calc(50% + -40vw);}
 		#logoSec img {width: 100%; max-width:350px;}
 		#inicio h2 {font-weight:300; font-size: 27px; margin: 20px;}
@@ -146,6 +146,25 @@
 			#nav label {display: none;}
 			#nav #lg a {padding: 4px 0 0;}
 		}
+		@media screen and (max-width:1200px) {
+			#logoSec img {width: 300px;}
+			#inicio h2 {font-size: 23px; margin: 10px;}
+			#inicio p {margin: 10px; font-size: 23px; line-height: 33px;}
+			#store {margin: 15px 0 30px;}
+		}
+
+		@media screen and (max-width:970px) {
+			#logoSec img {width: 300px;}
+			#inicio h2 {font-size: 23px; margin: 10px;}
+			#inicio p {margin: 10px; font-size: 23px; line-height: 33px;}
+			#store {margin: 15px 0 30px;}
+		}
+
+		@media screen and (max-width:725px) {
+		
+		}
+
+
 	</style>
 <script>
 	var controller = new ScrollMagic.Controller();
@@ -172,7 +191,6 @@
 					<a href="#" class="fab fa-twitter"></a>
 					<a href="#" class="fab fa-youtube"></a>
 				</div>
-				<h3>¡Conectate a la experiencia y cuéntale a tus amigos!</h3>
 			</div>
 			<div id="mainCredits">Con-X: Convención Geek y WCS Costa Rica son propiedad de <a href="#">Plus Ultra!</a></div>
 		</div>
