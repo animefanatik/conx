@@ -18,20 +18,20 @@
 	<script src="js/lightbox.js"></script>
 	<script src="js/custom.js"></script>
 	<style>
-		body {font: 300 18px 'Alegreya Sans'; color: #fff;}
+		body {font: 300 18px 'Alegreya Sans'; color: #fff; background: #0078b5}
 		strong {font-weight:500;}
 		#inicio {height: 100vh; background: #0078b5 url('../img/convencion-comic.jpg') center bottom no-repeat; background-size: contain;}
 		#logoSec {display: flex; flex-direction: column; align-items: center; justify-content: center; width: 460px; position: relative; top: calc(50% + -43vh); left: calc(50% + -40vw);}
 		#logoSec img {width: 100%; max-width:350px;}
 		#inicio h2 {font-weight:300; font-size: 27px; margin: 20px;}
-		#inicio h3 {font-weight:300;}
+		#inicio h3 {font-weight:300; }
 		#inicio p {font: 500 25px/35px "Alegreya Sans"; letter-spacing: 0.5px; color: #fff; text-align: center;}
 		#indexNav {display: block; text-align: right; width: 80%; margin: 0 auto;}
 		#indexNav a {color: #FFF; text-decoration: none; margin: 0px 50px 0 0; font: 500 18px/100px 'Alegreya Sans';}
 		#indexNav a:hover {color: #ffb977;}
 		#indexNav .upNav {color: #f4f260;}
 
-		#store {display: block; background-image: linear-gradient(#ff9600, #e25a00); border:1px solid #e08400; border-radius: 10px; text-align: center; color: #FFF; text-decoration: none; font: 400 24px/45px "Alegreya Sans"; width: 175px; margin: 20px 0 45px; }
+		#store, #wcs p a {display: inline-block; background-image: linear-gradient(#ff9600, #e25a00); border:1px solid #e08400; border-radius: 10px; text-align: center; color: #FFF; text-decoration: none; font: 400 22px/45px "Alegreya Sans"; width: 180px; margin: 20px 0 45px; }
 		#mainSocial a {color: #FFF; text-decoration: none; font-size: 35px; margin: 0 10px;}
 		#mainSocial a:hover {color: rgb(182, 232, 241);}
 		#inicio p, #mainSocial a, #inicio h3 {text-shadow:2px 2px 0px rgba(0, 0, 0, 0.2)/*, 3px 0px 6px #081153*/;}
@@ -41,8 +41,12 @@
 		#chum {background: url('../img/background.png') center top no-repeat; height: 965px;}
 		#freezer {background: url('../img/background.png') center -965px no-repeat; height: 1290px;}
 		#nicte {background: url('../img/background.png') center -2254px no-repeat; height: 875px;}
-		#wcs {display: flex; flex-direction: column; color: #000; align-items: center; justify-content: space-evenly; text-align: center; padding: 100px 0;  background: url('../img/wcsback.jpg') fixed;}
-
+		#wcs {display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; text-align: center; padding: 100px 0 55px; background-image: linear-gradient(141deg, #0076b0 0%, #3d9dcc 51%, #0076b0 75%);}
+		#wcs h2 {font:300 25px/25px 'Alegreya Sans'}
+		#wcs h3 {font:300 150px/0px 'Alegreya Sans'; margin: 50px 0 100px 0; text-shadow:2px 2px 0px rgba(0, 0, 0, 0.4)}
+		#wcs h3 span {display: block; font-size:80px; margin-top: 85px; } 
+		#wcslogo {width: 90%; max-width: 460px; margin-bottom: 50px; }
+		.wcsTxt {width: 100%; max-width: 960px;}
 		.scene {text-align: center; overflow: hidden;}
 		#artInt {font-size: 30px; display: block; margin: 0; background-color: cadetblue;}
 		
@@ -50,14 +54,14 @@
 		#carroviejo {width:409.48px; height:102.66px; background: url('../img/carroviejo.svg')no-repeat; position: relative; top:-725px; left: 0px;}
 		#pawnshop {width:698.57px; height:471.49px; background: url('../img/pawnshop.png')no-repeat; position: relative; top: -360px; left:calc(50% + 20px);}
 		#goku {width:160.33px; height:100.59px; position: relative; top:105px; left:100%; background:url('../img/goku.png') no-repeat; background-size: contain;}
-		#ship {width:555.03px; height:297.30px; position: relative; top:200px; left:calc(50% - 605px); background:url('../img/ship.svg') no-repeat;}
-		#shipshadow {width:555.03px; height:297.30px; position: relative; top:750px; left:calc(50% - 605px); background:url('../img/shipshadow.svg') no-repeat;}
-		#fogR {width:161.22px; height:126.50px; position: relative; top:150px; left:calc(50% - 50px); background:url('../img/fogR.png') no-repeat;}
-		#fogL {width:148.33px; height:91.55px; position: relative; top:40px; left:calc(50% - 770px); background:url('../img/fogL.png') no-repeat;}
+		#ship {width:555.03px; height:297.30px; position: relative; top:200px; left:calc(50% + 85px); background:url('../img/ship.svg') no-repeat;}
+		#shipshadow {width:555.03px; height:297.30px; position: relative; top:750px; left:calc(50% + 85px); background:url('../img/shipshadow.svg') no-repeat;}
+		#fogR {width:161.22px; height:126.50px; position: relative; top:110px; left:calc(50% + 575px); background:url('../img/fogR.png') no-repeat;}
+		#fogL {width:148.33px; height:91.55px; position: relative; top:0px; left:calc(50% - 0px); background:url('../img/fogL.png') no-repeat;}
 		#alina {width:197.66px; height:341.75px; position: relative; top:252px; left:calc(50% + 282px); background:url('../img/alina.png') no-repeat;}
-		#chumlee {position: relative; top:-740px; left:calc(50% - 400px);}
-		#reyero {position: relative; top:-500px; left:calc(50% - 400px);}
-		#infomex {position: relative; top:-80px; left:calc(50% - 550px);}
+		#chumlee {position: relative; top:-740px; left:0;}
+		#reyero {position: relative; top:-500px; right:0;}
+		#infomex {position: relative; top:-80px; left:0;}
 		.pop {background: #0078B5; font-size: 16px; font-weight: 300; display: flex; align-items: center; text-align: left; width: 500px; border-radius: 25px; padding: 20px;}
 		.pop img {flex-shrink: 0; border: 1px solid #FFF; margin-right: 20px;}
 		.pop h2 {font-size: 26px;  font-weight: 700; margin: 0 0 15px;}
@@ -68,17 +72,17 @@
 		.pop .inst {background: url('../img/instagram.svg') center no-repeat;}
 		.pop .twit {background: url('../img/twitter.svg') center no-repeat;}
 		.pop .tube {background: url('../img/youtube.svg') center no-repeat;}
-		#wcslogo {width: 100%; max-width: 460px; margin-bottom: 50px; }
-		#wcs section {width: 100%; max-width: 960px; margin-bottom:50px;}
-		#cosplay {padding-bottom: 75px;}
-		#cosplay h2, #graficos h2 {font-size: 50px; font-weight: 500; margin: 75px auto 50px; text-align: center; /*color: #ecd977;*/ }
-		#graficos {background:#a4ddf3; border: 1px solid #a4ddf3;}
+		#cosplay {padding-bottom: 75px; background:#0076b0 url('../img/stars.png');}
+		#cosplay h2, #graficos h2 {font-size: 50px; font-weight: 500; margin: 0px auto 50px; text-align: center;}
+		#cosplay h2 {margin-top: 75px;}
+		#cosplay h2:first-of-type{margin-top: 0px;}
+		#cosplay, #graficos {padding-top:80px; border-top:2px solid #FFF;  }
+		#graficos {background:#a4ddf3;}
 
 		@keyframes rotate {from{transform: rotate(0deg);} to{transform: rotate(360deg);}}
 		@keyframes leftToRight {0%{left: 100%;} 40%{left: -20%;}}
 		@keyframes dune {0% {transform:translate(calc(50% - 300px),0px) rotate(-360deg);} 10%, 100% {transform:translate(calc(50% + 2000px),0px) rotate(360deg);}}
 		@keyframes move-twink-back {from {background-position:0 0;} to {background-position:-10000px 5000px;}}
-		.stars, .twinkling  {position: fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%; display:block;}
 		
 		#rueda {width:400px; height:400px; position: relative; top:25px; left: calc(50% - 885px); background:url('../img/ferris.svg') no-repeat;
 			animation: rotate 25s linear infinite;}
@@ -88,28 +92,25 @@
 			animation: dune 90s linear infinite;}
 
 		/* Carousel Styles */
-		.slick-slider {width: 90%; background: #FFF;} 
-		.slick-prev {left: 0; z-index: 100; background: #94c318 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
-		.slick-next {right: 0; z-index: 100; background: #94c318 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
+		.slick-slider {width: 90%;} 
+		.slick-prev {left: 0; z-index: 100; background: #0078b5 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
+		.slick-next {right: 0; z-index: 100; background: #0078b5 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
 		.slick-prev, .slick-next {
 			font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 50px; height: 100%; padding: 0; cursor: pointer; border: none; outline: none;
 			-webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%);
 		}
 		.slick-slide {margin: 0 10px;}
 		.slick-slide img {width: 100%;}
-		.slick-slide a {color: #000; text-decoration:none;}
-
-		.stars {background:#5098db url('../img/stars.png') repeat top center;z-index:-9999;}
-		.twinkling{background:transparent url('../img/twinkling.png') repeat top center; z-index:-9999; animation:move-twink-back 200s linear infinite;}
+		.slick-slide a {color: #FFF; text-decoration:none;}
 
 		.cosplayStars.slick-slider {background: none; margin: 0 auto;}
-		.cosplayStars .slick-prev {background: #5098db url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
-		.cosplayStars .slick-next {background: #5098db url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
+		.cosplayStars .slick-prev {background: #0076b0 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/leftArrow.png') center center no-repeat;}
+		.cosplayStars .slick-next {background: #0076b0 url('http://arteweb506.com/codeable/wp-content/themes/roughHands/img/rightArrow.png') center center no-repeat;}
 		.cosplayStars .slick-slide {margin: 0 45px; height: 465px; }
-		.cosplayStars .slick-slide:nth-child(odd) img {margin-top: 195px;}
+		.cosplayStars .slick-slide:nth-child(even) img {margin-top: 195px;}
 		.cosplayStars .slick-slide p {position: relative; top: -30px; right: 10%; text-align: end; font-size: 14px; font-weight: 500;}
 
-		#graficos h2 {color: #FFF}
+		#graficos h2 {color: #0078B5}
 		#arteWrap {display: flex; flex-direction: row; align-items: center; width: 95%; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; justify-content: center;}
 		.arte {margin: 25px 15px 25px;}
 		.marco {background: #7cd0ef; border: 12px solid #2bbae8; padding: 20px;}
@@ -118,10 +119,10 @@
 		.bulb {background: url('../img/bulb.png') 124px center no-repeat; height: 25px; width: 100%; position: relative; top: -388px;}
 		.light {background: url('../img/rect.svg') center no-repeat; opacity: 0.2; height: 250px; width: 100%; position: relative; top: -388px; margin-bottom: -230px;}
 		.light:hover {opacity: 1;}
-		.arte p {color: #000; font-weight: 500; margin: 15px; text-align: center;}
+		.arte p {color: #0078B5; font-weight: 500; margin: 15px; text-align: center;}
 		.socialLink {position: relative; top:-65px; }
-		.socialLink a {color: #2bbae8; text-decoration: none; margin: 0 10px; font-size: 24px;}
-		.socialLink a:hover {color: #e1f7ff;}
+		.socialLink a {color: #0078B5; text-decoration: none; margin: 0 10px; font-size: 24px;}
+		.socialLink a:hover {color: rgb(64, 176, 233);}
 
 		#nav {display:none; position: fixed; width: 100%; z-index: 999; opacity: 0; top: 0;}
 		#nav ul {display: none; width: 100%; list-style: none; margin: 0px; padding: 0px;}
@@ -158,11 +159,40 @@
 			#inicio h2 {font-size: 23px; margin: 10px;}
 			#inicio p {margin: 10px; font-size: 23px; line-height: 33px;}
 			#store {margin: 15px 0 30px;}
+			#indexNav {text-align: center;}
+			#chumlee {top:-760px;}
+
 		}
 
-		@media screen and (max-width:725px) {
-		
+		@media screen and (max-width:751px) {
+			#inicio {background-image: url('../img/convencion-anime.jpg'); background-size: unset;}
+			#logoSec {left:calc(50% - 230px);}
+			#indexNav a {margin: 0px 5% 0 0}
+			#chumlee {top: -815px;}
+			#reyero {top:-560px;}
+			#infomex {top: -120px;}
+			.pop {flex-direction: column; width: 450px; left: calc(50% - 245px) !important;}
+			.pop img {margin: 0px 0px 20px 0px;}
 		}
+
+		@media screen and (max-width:546px) {
+			#logoSec{top: calc(50% + -200px);}
+			#logoSec img {width: 245px;}
+			#inicio h2 {font-size: 19px; margin: 10px;}
+			#inicio p {margin: 10px; font-size: 17.8px; line-height: 30px;}
+			#mainSocial a {font-size: 28px;}
+			#mainCredits {font-size: 11px;}
+			#logoSec {width: 300px; left:calc(50% - 150px);}
+			#indexNav {display: none;}
+			#nav {display: block !important; opacity: 1 !important;}
+			#chumlee {top: -875px;}
+			#reyero {top:-560px;}
+			#infomex {top: -195px;}
+			.pop {width: 300px; left: calc(50% - 170px) !important;}
+		}
+
+
+
 
 
 	</style>
@@ -171,6 +201,27 @@
 </script>	
 </head>
 <body>
+	<nav id="nav">
+		<input class="trigger" type="checkbox" id="mainNavButton">
+		<label for="mainNavButton" onclick>Menu</label>
+		<ul>
+			<li id="lg"><a href="#"><img src="/img/convencion-logo.png" alt="convencion anime comic"></a></li>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Invitados</a>
+				<ul>
+					<li><a href="#">Austin Chumlee</a></li>
+					<li><a href="#">Gerardo Reyero</a></li>
+					<li><a href="#">Alina Nicte</a></li>
+					<li><a href="#">Cosplayer</a></li>
+					<li><a href="#">Ilustradores</a></li>					
+				</ul>
+			</li>
+			<li><a href="#">Actividades</a></li>
+			<li><a href="#">Stands</a></li>
+			<li><a href="#" class="upNav">Boletos</a></li>
+			<li><a href="#">Contacto</a></li>
+		</ul>
+	</nav>	
 	<div id="content-wrapper">
 		<div id="inicio">
 			<nav id="indexNav">
@@ -197,27 +248,6 @@
 
 
 		<div class="scrollContent">
-			<nav id="nav">
-				<input class="trigger" type="checkbox" id="mainNavButton">
-				<label for="mainNavButton" onclick>Menu</label>
-				<ul>
-					<li id="lg"><a href="#"><img src="/img/convencion-logo.png" alt="convencion anime comic"></a></li>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Invitados</a>
-						<ul>
-							<li><a href="#">Austin Chumlee</a></li>
-							<li><a href="#">Gerardo Reyero</a></li>
-							<li><a href="#">Alina Nicte</a></li>
-							<li><a href="#">Cosplayer</a></li>
-							<li><a href="#">Ilustradores</a></li>					
-						</ul>
-					</li>
-					<li><a href="#">Actividades</a></li>
-					<li><a href="#">Stands</a></li>
-					<li><a href="#" class="upNav">Boletos</a></li>
-					<li><a href="#">Contacto</a></li>
-				</ul>
-			</nav>
 			<div id="chum" class="scene">					
 				<div id="ferris">
 					<div id="tower"></div>
@@ -242,7 +272,7 @@
 				<script>
 					var reveal = new TimelineMax()
 						.add([
-							TweenMax.fromTo("#chumlee", 0.4, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
+							TweenMax.fromTo("#chumlee", 0.5, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
 							TweenMax.to("#carroviejo", 1, {left: "100%", delay:0.4}),
 							TweenMax.fromTo("#nav", 1, {opacity: 0, display:"none"}, {opacity: 1, display:"block"})
 							]);
@@ -287,7 +317,7 @@
 							TweenMax.fromTo("#shipshadow", 150, {opacity: 0.2}, {opacity: 1, delay: 70}),
 							TweenMax.fromTo(["#fogR", "#fogL" ], 0.5, {opacity: 0}, {opacity: 0.5, delay:120}),
 							TweenMax.fromTo(["#fogR", "#fogL" ], 1, {opacity: 0.5}, {opacity: 0, delay:150}),
-							TweenMax.fromTo("#reyero", 100, {opacity:0}, {left:"55%", opacity:1})
+							TweenMax.fromTo("#reyero", 100, {left:"100%", opacity:0}, {left:"15%", opacity:1})
 							]);
 
 					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 900})
@@ -313,10 +343,9 @@
 					</div>
 				</div>				
 				<script>
-
 					var alina = new TimelineMax()
 						.add([
-							TweenMax.fromTo("#infomex", 0.7, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
+							TweenMax.fromTo("#infomex", 0.4, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
 							TweenMax.fromTo("#alina", 1, {opacity: 0}, {opacity: 1} ),
 							]);					
 
@@ -328,14 +357,14 @@
 			</div>
 			<div id="wcs">
 				<img id="wcslogo" src="/img/logo-wcs.png" alt="World Cosplay Summit Costa Rica">
-				<section>
-					<h2>World Cosplay Summit, Costa Rica.</h2>
+				<div class="wcsTxt">
 					<h3>16<span>Parejas</span></h3>
-					<p>Disfrute del concurso de cosplay más impresionate en la historia de nuestro país.</p>
-					<p>Los mejores expositores del cosplay costarricense, se enfrentan para ganar su pase hasta Nagoya, Japón y representar a Costa Rica en la final del mundial de World Cosplay Summit junto a otros 40 paises.</p>
-					<p>¡Esta será una actividad llena de emociones!.</p>
-					<p><strong>No te pierdas de WCS y ven para apoyar a tus parejas favoritas.</strong></p>
-				</section>
+					<h2>World Cosplay Summit, Costa Rica.</h2>
+					<p>Ven a apoyar a tus cosplayers favoritos en este concurso que será hasta ahora, el más impresionate en la historia de nuestro país.</p>
+					<p>16 parejas, compuestas por los mejores expositores del cosplay costarricense, se enfrentan para ganar su pase a la competencia mundial "World Cosplay Summit", que se llevará a cabo en Nagoya, Japón y donde estarán representando a Costa Rica en este certamen que reúne a 42 países y a más de 200 aficionados al cosplay.</p>
+					<p><strong>¡Esta será una actividad llena de emociones y no te la puedes perder!</strong></p>
+				</div>
+				<br><br>
 				<div class="carousel">
 					<div><a href="/img/foto/south-africa.jpg" data-lightbox="cosplay"><img src="/img/th-south-africa.jpg" alt="South Africa"><span>Team Sudáfrica 2018</span></a></div>
 					<div><a href="/img/foto/costa-rica.jpg" data-lightbox="cosplay"><img src="/img/th-costa-rica.jpg" alt="Costa Rica"><span>Team Costa Rica 2018</span></a></div>
@@ -348,11 +377,31 @@
 					<div><a href="/img/foto/dinamarca.jpg" data-lightbox="cosplay"><img src="/img/th-dinamarca.jpg" alt="Dinamarca"><span>Team Dinamarca 2018</span></a></div>
 					<div><a href="/img/foto/japon.jpg" data-lightbox="cosplay"><img src="/img/th-japon.jpg" alt="Japon"><span>Team Japón 2018</span></a></div>
 				</div>
+				<br>
+				<div class="wcsTxt">
+					<p>Y si deseas acompañar a los ganadores, puedes encontrar información sobre los tours a Japón que ya están disponibles y vivir la mejor eXperiencia junto a todo el equipo costarricense en <strong>WCS</strong>, el <strong>Pikachu outbreak 2019</strong> y <strong>Comiket</strong>.</p>
+					<p><a href="https://wcscostarica.com/#tourCos"><i class="fas fa-plane"></i>&nbsp;&nbsp;Tours WCS</a></p>						
+				</div>
+ 
+				<script>
+				var nervousHat = new TimelineMax({repeat: -1, yoyo: true})
+                    .add(TweenMax.to("#wcslogo", 0.3, {bottom: "+=5", left: "-=6", rotation: -3}))
+                    .add(TweenMax.to("#wcslogo", 0.3, {bottom: "-=10", left: "+=6", rotation: 0}))
+                    .add(TweenMax.to("#wcslogo", 0.3, {bottom: "+=5", left: "+=6", rotation: 3}))
+                    .add(TweenMax.to("#wcslogo", 0.3, {bottom: "-=5", left: "-=3", rotation: 1.5}))
+                    .add(TweenMax.to("#wcslogo", 0.3, {bottom: "+=5", left: "-=6", rotation: -1.5}))
+                    .add(TweenMax.to("#wcslogo", 0.3, {bottom: "+=5", left: "+=3", rotation: 0}))
+                    .add(TweenMax.to("#wcslogo", 0.3, {bottom: "-=10"}));
+
+					var scene = new ScrollMagic.Scene({triggerElement: "#wcs", duration: 800, offset: -100 })
+                    .setTween(nervousHat)
+                    .addTo(controller);
+				
+				</script>
 			</div>
 			<div id="cosplay">
 				<div class="stars"></div>
-				<!--<div class="twinkling"></div>-->
-				<h2>Cosplay Rising Stars</h2>
+				<h2><i class="far fa-star"></i> Cosplay Rising Stars</h2>
 				<div class="cosplayStars">
 						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
 						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
@@ -361,7 +410,7 @@
 						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
 						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
 				</div>
-				<h2>Cosplay Super Novas</h2>
+				<h2><i class="fas fa-star"></i> Cosplay Super Novas</h2>
 				<div class="cosplayStars">
 						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
 						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
