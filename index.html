@@ -39,7 +39,7 @@
 		.anim {animation: otros 1s; animation-duration: 3s;}
 		@keyframes logoIntro {from {width:0%; opacity: 0;} to {width: 80%; opacity: 1;}}
         @keyframes otros {0% {opacity: 0;} 50% {opacity: 0;} 100% {opacity: 1;}}
-		#store, #wcs p a {display: inline-block; background-image: linear-gradient(#ff9600, #e25a00); border:1px solid #e08400; border-radius: 10px; text-align: center; color: #FFF; text-decoration: none; font: 400 22px/45px "Alegreya Sans"; width: 180px; margin: 20px 0 45px; padding-top: 2px; }
+		#store, #wcs p a, .goplus {display: inline-block; background-image: linear-gradient(#ff9600, #e25a00); border:1px solid #e08400; border-radius: 10px; text-align: center; color: #FFF; text-decoration: none; font: 400 22px/45px "Alegreya Sans"; width: 180px; margin: 20px 0 45px; padding-top: 2px; }
 		#mainSocial a {color: #FFF; text-decoration: none; font-size: 35px; margin: 0 10px;}
 		#mainSocial a:hover {color: rgb(182, 232, 241);}
 		#inicio p, #mainSocial a, #inicio h3 {text-shadow:2px 2px 0px rgba(0, 0, 0, 0.2)/*, 3px 0px 6px #081153*/;}
@@ -272,6 +272,7 @@
 							]);
 					var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration: 1200})
 						.setTween(reveal)
+						.reverse (false)
 						.addTo(controller);
 				</script>					
 			</div>
@@ -310,13 +311,13 @@
 							]);
 					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 900})
 						.setTween(freezer)
+						.reverse (false)
 						.addTo(controller);
 
 					var rotateDune = new TimelineMax({repeat: -1, yoyo: false})
 						.add(TweenMax.to("#dune", 20, {left: "0%", left: "120%", rotation: 0}));
-					var scene = new ScrollMagic.Scene({triggerElement: "#dune", duration: 500, offset: -100 })
+					var scene = new ScrollMagic.Scene({triggerElement: "#reyero", duration: 500, offset: 100 })
 					.setTween(rotateDune)
-					.reverse (false)
                     .addTo(controller);
 				</script>
 			</div>
@@ -344,6 +345,7 @@
 							]);					
 					var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 600})
 						.setTween(alina)
+						.reverse(false)
 //						.addIndicators({name: "freexer (duration: 600)"}) // add indicators (requires plugin)
 						.addTo(controller);					
 				</script>			
@@ -490,7 +492,60 @@
 			</div>
 		</div>
 		<div id="boletos">
-
+			<style>
+				#boletos {padding: 75px 0; }
+				#boletos .wrapper {display: flex; flex-direction: row; justify-content: space-around; flex-wrap: wrap;}
+				.ticket {display:flex; flex-direction: column; width: 30%; max-width: 350px; min-width: 285px; background: #FFF; border: 2px solid #FFF; color: #0076b5; padding-bottom: 25px; margin-top: 35px;}
+				.ticket p, .ticket h3 { display: block; margin: 10px auto 10px;}
+				.ticket h3 {height: 50px; text-align: center;}
+				.ticket div {width: 85%; margin: 5px auto 25px; height: 250px;}	
+				.ticketImg {display block; text-align: center; color: #FFF; font: 700 28px/20px "Alegreya Sans"; text-decoration:none; padding:0px 0 25px; margin-bottom:20px;}
+				.reg .ticketImg {background: url('../img/reg-bg.jpg');}
+				.vip .ticketImg {background: url('../img/vip-bg.jpg');}
+				.gen .ticketImg {background: url('../img/gen-bg.jpg');}
+				.gen .free {padding: 20px; background: #dbf6ff;}
+				.ticketImg img {display: block; margin: 0 auto; margin: 35px auto 25px;}
+				.ticketImg b {text-shadow:2px 0px 2px rgba(0, 0, 0, 0.5), 2px 0px 2px #081153}
+				.goplus {width: 85%; margin: auto; position: relative; bottom: 0;}
+				.vip .goplus {background: #f88800; url('../img/money.png') left bottom no-repeat;}
+				.vip .goplus:hover {background: #faa237;}
+				.gen .goplus {background: #acacac; border-color: #acacac;}
+				.reg .goplus {background: #299ed9; border-color:#299ed9; }
+				.reg .goplus:hover {background:#69b9e1; }
+			</style>
+			<div class="wrapper">
+				<div class="ticket reg">
+					<a href="#" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>X PACK</b></a>
+					<h3>Valor: ₡10,000 colones.<br><small>($16.50 dólares)*</small></h3>
+					<div>
+						<p class="where">Exclusivo de la tienda en línea.</p>
+						<p><strong>Incluye:</strong><br>+ Set de 3 postales diseñadas por reconocidos artitas de comic nacional. <b>100% coleccionables</b>.</p>
+						<p>+ Acceso de cortesía a Con-X: Convención Geek</p>
+					</div>
+						<a href="#" class="goplus" target="_blank">COMPRAR</a>
+				</div>
+				<div class="ticket vip">
+					<a href="#" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>GEEK PACK XL</b></a>
+					<h3>Valor: ₡40,000 colones.<br><small>($66.00 dólares)*</small></h3>
+					<div>
+						<p class="where">Exclusivo de la tienda en línea.</p>
+						<p><strong>Incluye:</strong><br>+ Set de postales exclusivas.<br>+ Camiseta oficial del evento.<br>+ Poster Premium Chumlee.<br>+ Poster Premium Laura Torres.<br>+ Regalia de los patrocinadores.<br>+ Acceso premium frente a tarima</p>
+						<p>+ Acceso de cortesía a Con-X: Convención Geek</p>
+					</div>
+					<a href="#" class="goplus" target="_blank">COMPRAR.</a>
+				</div>
+				<div class="ticket gen">
+					<a href="#" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>ENTRADA GENERAL</b></a>
+					<h3>Valor: ₡10,000 colones.</h3>
+					<div>
+						<p class="where">Se compra el mismo día del evento.</p>
+						<p>Acceso a todas las actividades.</p>
+						<p class="free"><strong>Entrada gratis para:</strong><br>- Niños menores de 12 años.<br>- Adultos mayores.<br>- Personas con discapacidad.</p>
+					</div>
+					<p class="goplus">De venta el día del evento.</p>
+				</div>
+			</div>
+			<p>(*) Nuestro procesador de tarjetas de crédito y débito recibe el pago en moneda dólares únicamente, pedimos disculpas por los inconvenientes que esta situación pueda provocar.</p>
 		</div>
 		<div id="final">
 			<div class="wrapper">
@@ -509,11 +564,12 @@
 					<div>
 						<h4>Información</h4>
 						<a href="#"><i class="fas fa-store"></i>Stands</a>
-						<a href="#"><i class="fas fa-hands-helping"></i></i>Patrocinio</a>
+						<a href="#"><i class="fas fa-hands-helping"></i>Patrocinio</a>
 						<a href="#"><i class="fas fa-users"></i>Talentos</a>						
 						<a href="#"><i class="fas fa-newspaper"></i>Prensa</a>
 						<a href="#"><i class="fas fa-plane"></i>Tours Japón</a>
-						<a href="#"><i class="fas fa-phone"></i></i>Contacto</a>
+						<a href="#"><i class="fas fa-phone"></i>Contacto</a>
+						
 					</div>
 				</div>
 				<div id="patron">

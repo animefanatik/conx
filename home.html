@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Con-X: Convención Geek - Costa Rica</title>
+	<meta property="og:title" content="Con-X: Convención Geek - Costa Rica" />
+	<meta property="og:description" content="Los artistas del cine y la TV que siempre has querido conocer y el mejor concurso cosplay en el Centro de Convenciones de Costa Rica." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+	<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
 	<link rel="icon" href="/favicon.png" type="image/png">
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,700" rel="stylesheet">
@@ -206,10 +211,10 @@
 		<label for="mainNavButton" onclick>Menu</label>
 		<ul>
 			<li id="lg"><a href="#"><img src="/img/convencion-logo.png" alt="convencion anime comic"></a></li>
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Invitados</a></li>
-			<li><a href="#">WCS</a></li>
-			<li><a href="#" class="upNav">Boletos</a></li>
+			<li><a href="/">Inicio</a></li>
+			<li><a href="#chum">Invitados</a></li>
+			<li><a href="#wcs">WCS</a></li>
+			<li><a href="https://plus-ultra.io" target="_blank" class="upNav">Boletos</a></li>
 			<li><a href="#">Stands</a></li>
 			<li><a href="#">Contacto</a></li>
 		</ul>
@@ -217,10 +222,10 @@
 	<div id="content-wrapper">
 		<div id="inicio">
 			<nav id="indexNav">
-				<a href="#">Invitados</a>
-				<a href="#">Actividades</a>
+				<a href="#chum">Invitados</a>
+				<a href="#wcs">WCS Costa Rica</a>
 				<a href="#">Stands</a>
-				<a href="#" class="upNav">Boletos</a>
+				<a href="https://plus-ultra.io" target="_blank" class="upNav">Boletos</a>
 				<a href="#">Contacto</a>
 			</nav>
 			<div id="logoSec">
@@ -229,9 +234,9 @@
 				<p class="anim">Domingo 5 de Mayo - 10am<br>Centro de Convenciones de Costa Rica<br>Entrada General: &cent;10,000 colones</p>
 				<a href="#" id="store" class="anim"><i class="fas fa-ticket-alt"></i> &nbsp;BOLETOS</a>
 				<div id="mainSocial" class="anim">
-					<a href="#" class="fab fa-facebook-square"></a>
-					<a href="#" class="fab fa-instagram"></a>
-					<a href="#" class="fab fa-youtube"></a>
+					<a href="https://www.facebook.com/conxcr/" target="_blank" class="fab fa-facebook-square"></a>
+					<a href="https://www.instagram.com/conxcr/" target="_blank" class="fab fa-instagram"></a>
+					<a href="https://www.youtube.com/channel/UCUMB1CzczAPzX72L1lP2BVw" class="fab fa-youtube"></a>
 				</div>
 			</div>
 			<div id="mainCredits">Con-X: Convención Geek y WCS Costa Rica son propiedad de <a href="#">Plus Ultra!</a></div>
@@ -245,7 +250,7 @@
 				<div id="sportcar"></div>
 				<div id="pawnshop"></div>
 				<div id="chumlee" class="pop">
-					<img src="https://placeimg.com/214/291/people" alt="jjjs">
+					<img src="/img/chumlee.jpg" alt="jjjs">
 					<div>
 						<h2>Austin "Chumlee" Russell</h2>
 						<p>Famoso por el show: <b>"El precio de la Historia"</b> de History Channel, es uno de los empleados y quizás el personaje más carismático de "Gold & Silver Pawn Shop" en Las Vegas. Su fama también lo ha convertido en uno de los meme más conocidos debido a la frase: "No lo sé Rick, parece falso." la cual en realidad nunca fue usada en la TV.</p>
@@ -267,8 +272,7 @@
 							]);
 					var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration: 1200})
 						.setTween(reveal)
-//						.setPin("#nav")
-//						.reverse (false)
+						.reverse (false)
 						.addTo(controller);
 				</script>					
 			</div>
@@ -307,13 +311,13 @@
 							]);
 					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 900})
 						.setTween(freezer)
+						.reverse (false)
 						.addTo(controller);
 
 					var rotateDune = new TimelineMax({repeat: -1, yoyo: false})
 						.add(TweenMax.to("#dune", 20, {left: "0%", left: "120%", rotation: 0}));
-					var scene = new ScrollMagic.Scene({triggerElement: "#dune", duration: 500, offset: -100 })
+					var scene = new ScrollMagic.Scene({triggerElement: "#reyero", duration: 500, offset: 100 })
 					.setTween(rotateDune)
-					.reverse (false)
                     .addTo(controller);
 				</script>
 			</div>
@@ -341,6 +345,7 @@
 							]);					
 					var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 600})
 						.setTween(alina)
+						.reverse(false)
 //						.addIndicators({name: "freexer (duration: 600)"}) // add indicators (requires plugin)
 						.addTo(controller);					
 				</script>			
@@ -506,11 +511,12 @@
 					<div>
 						<h4>Información</h4>
 						<a href="#"><i class="fas fa-store"></i>Stands</a>
-						<a href="#"><i class="fas fa-hands-helping"></i></i>Patrocinio</a>
+						<a href="#"><i class="fas fa-hands-helping"></i>Patrocinio</a>
 						<a href="#"><i class="fas fa-users"></i>Talentos</a>						
 						<a href="#"><i class="fas fa-newspaper"></i>Prensa</a>
 						<a href="#"><i class="fas fa-plane"></i>Tours Japón</a>
-						<a href="#"><i class="fas fa-phone"></i></i>Contacto</a>
+						<a href="#"><i class="fas fa-phone"></i>Contacto</a>
+						
 					</div>
 				</div>
 				<div id="patron">
