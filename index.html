@@ -7,8 +7,8 @@
 	<meta property="og:title" content="Con-X: Convención Geek - Costa Rica" />
 	<meta property="og:description" content="Los artistas del cine y la TV que siempre has querido conocer y el mejor concurso cosplay en el Centro de Convenciones de Costa Rica." />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
-	<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+	<meta property="og:url" content="https://conx.fun/" />
+	<meta property="og:image" content="https://conx.fun/img/og.jpg" />
 	<link rel="icon" href="/favicon.png" type="image/png">
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,700" rel="stylesheet">
@@ -111,9 +111,7 @@
 		.slick-slider {width: 90%;} 
 		.slick-prev {left: 0; z-index: 100; background: #0078b5 url('../img/leftArrow.png') center center no-repeat;}
 		.slick-next {right: 0; z-index: 100; background: #0078b5 url('../img/rightArrow.png') center center no-repeat;}
-		.slick-prev, .slick-next {
-			font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 50px; height: 100%; padding: 0; cursor: pointer; border: none; outline: none; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%);
-		}
+		.slick-prev, .slick-next {font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 50px; height: 100%; padding: 0; cursor: pointer; border: none; outline: none; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%);}
 		.slick-slide {margin: 0 10px;}
 		.slick-slide img {width: 100%;}
 		.slick-slide a {color: #FFF; text-decoration:none;}
@@ -131,7 +129,7 @@
 		.ticket {display:flex; flex-direction: column; width: 45%; min-width: 285px; background: #FFF; border: 2px solid #FFF; color: #0076b5; padding-bottom: 25px; margin-top: 35px;}
 		.ticket p, .ticket h3 { display: block; margin: 10px auto 10px;}
 		.ticket h3 {height: 50px; text-align: center;}
-		.ticket div {width: 85%; margin: 5px auto 25px; min-height: 305px;}	
+		.ticket div {width: 85%; margin: 5px auto 25px; min-height: 325px;}	
 		.ticketImg {display: block; text-align: center; color: #FFF; font: 700 28px/20px "Alegreya Sans"; text-decoration:none; padding:0px 0 25px; margin-bottom:20px;}
 		.reg .ticketImg {background: url('../img/reg-bg.jpg');}
 		.vip .ticketImg {background: url('../img/vip-bg.jpg');}
@@ -215,6 +213,7 @@
 			#indexNav {display: none;}
 			#nav {display: block !important; opacity: 1 !important;}
 			#chumlee {top: -975px;}
+			#freezer {height: 965px;}
 			#reyero {top:-560px;}
 			#infomex {top: -195px;}
 			.pop {width: 300px; left: calc(50% - 170px) !important;}
@@ -242,7 +241,7 @@
 			<li id="lg"><a href="#"><img src="/img/convencion-logo.png" alt="convencion anime comic"></a></li>
 			<li><a href="/">Inicio</a></li>
 			<li><a href="#chum">Invitados</a></li>
-			<li><a href="#wcs">WCS</a></li>
+			<li><a href="#wcs">WCS Costa Rica</a></li>
 			<li><a href="https://plus-ultra.io" target="_blank" class="upNav">Boletos</a></li>
 			<li><a href="#">Stands</a></li>
 			<li><a href="#">Contacto</a></li>
@@ -253,22 +252,22 @@
 			<nav id="indexNav">
 				<a href="#chum">Invitados</a>
 				<a href="#wcs">WCS Costa Rica</a>
-				<a href="#">Stands</a>
 				<a href="https://plus-ultra.io" target="_blank" class="upNav">Boletos</a>
+				<a href="#">Stands</a>
 				<a href="#">Contacto</a>
 			</nav>
 			<div id="logoSec">
 				<img id="conxLog" src="/img/conx-logo.png" alt="convención anime y comic costa rica">
 				<h2 class="anim">CONVENCIÓN DE CULTURA GEEK</h2>
 				<p class="anim">Domingo 5 de Mayo - 10am<br>Centro de Convenciones de Costa Rica<br>Entrada General: &cent;10,000 colones</p>
-				<a href="#" id="store" class="anim"><i class="fas fa-ticket-alt"></i> &nbsp;BOLETOS</a>
+				<a href="https://plus-ultra.io" target="_blank" id="store" class="anim"><i class="fas fa-ticket-alt"></i> &nbsp;BOLETOS</a>
 				<div id="mainSocial" class="anim">
 					<a href="https://www.facebook.com/conxcr/" target="_blank" class="fab fa-facebook-square"></a>
 					<a href="https://www.instagram.com/conxcr/" target="_blank" class="fab fa-instagram"></a>
 					<a href="https://www.youtube.com/channel/UCUMB1CzczAPzX72L1lP2BVw" class="fab fa-youtube"></a>
 				</div>
 			</div>
-			<div id="mainCredits">Con-X: Convención Geek y WCS Costa Rica son propiedad de <a href="#">Plus Ultra!</a></div>
+			<div id="mainCredits">Con-X: Convención Geek y WCS Costa Rica son propiedad de <a href="https://plus-ultra.io" target="_blanck" class="upNav">Plus Ultra!</a></div>
 		</div>
 		<div class="scrollContent">
 			<div id="chum" class="scene">					
@@ -284,10 +283,8 @@
 						<h2>Austin "Chumlee" Russell</h2>
 						<p>Famoso por el show: <b>"El precio de la Historia"</b> de History Channel, es uno de los empleados y quizás el personaje más carismático de "Gold & Silver Pawn Shop" en Las Vegas. Su fama también lo ha convertido en uno de los meme más conocidos debido a la frase: "No lo sé Rick, parece falso." la cual en realidad nunca fue usada en la TV.</p>
 						<span>
-							<a href="#" class="fab fa-facebook-square"></a>
-							<a href="#" class="fab fa-instagram"></a>
-							<a href="#" class="fab fa-twitter"></a>
-							<a href="#" class="fab fa-youtube"></a>
+							<a href="https://www.facebook.com/officialchumlee/" target="_blank" class="fab fa-facebook-square"></a>
+							<a href="https://www.instagram.com/chumlee702/" target="_blank" class="fab fa-instagram"></a>
 						</span>
 					</div>
 				</div>
@@ -407,7 +404,7 @@
 				<br>
 				<div class="wcsTxt">
 					<p>Y si deseas acompañar a los ganadores, puedes encontrar información sobre los tours a Japón que ya están disponibles y vivir la mejor eXperiencia junto a todo el equipo costarricense en <strong>WCS</strong>, el <strong>Pikachu outbreak 2019</strong> y <strong>Comiket</strong>.</p>
-					<p><a href="https://wcscostarica.com/#tourCos"><i class="fas fa-plane"></i>&nbsp;&nbsp;Tours WCS</a></p>						
+					<p><a href="https://wcscostarica.com/#tourCos" target="_blank"><i class="fas fa-plane"></i>&nbsp;&nbsp;Tours WCS</a></p>						
 				</div>
  
 				<script>
@@ -519,7 +516,6 @@
 						<h3>Valor: ₡10,000 colones.</h3>
 						<p>La entrada general se pondrá <u>a la venta el mismo día del evento</u> y tendrá un valor de ₡10,000.00 colones para todo público. La compra se podrá realizar con tarjeta de crédito o efectivo. Recomendamos a los asistentes llevar el monto completo y adquirir sus boletos únicamente en las boleterías oficiales dentro del CCCR.</p>
 						<p class="free"><strong>Entrada gratis para:</strong><br>- Niños menores de 12 años.<br>- Adultos mayores.<br>- Personas con discapacidad.</p>
-						</p>				 
 					</div>
 				</div>
 				<h2>Paquetes Promocionales Con-X.</h2>
@@ -527,27 +523,31 @@
 				<p>Encuentre también figuras y artículos exclusivos 100% originales e importados desde el Japón, ¡todo a muy buenos precios!.</p>
 				<div id="tickets">					
 					<div class="ticket reg">
-						<a href="#" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>X PACK</b></a>
-						<h3>Valor: ₡10,000 colones.<br><small>($16.50 dólares)*</small></h3>
+						<a href="https://plus-ultra.io/producto/x-pack/" target="_blank" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>X PACK</b></a>
+						<h3>Valor: ₡10,000 colones.<br><small>($16.15 dólares)*</small></h3>
 						<div>
 							<p class="where">Exclusivo de la tienda en línea.</p>
 							<p><strong>Incluye:</strong><br>+ Set de 3 postales exclusivas, diseñadas por reconocidos artitas e ilustradores costarricenses con reconocimiento internacional.<br> Todas son: <b>100% coleccionables</b>.</p>
-							<p class="free">La compra de este producto le obsequia un acceso de cortesía a Con-X: Convención Geek</p>
+							<p class="free">Cada pack incluye 1 acceso a Con-X: Convención Geek.</p>
 						</div>
-						<a href="#" class="goplus" target="_blank">COMPRAR</a>
+						<a href="https://plus-ultra.io/producto/x-pack/" target="_blank" class="goplus" target="_blank">COMPRAR</a>
 					</div>
 					<div class="ticket vip">
-						<a href="#" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>GEEK PACK XL</b></a>
-						<h3>Valor: ₡40,000 colones.<br><small>($66.00 dólares)*</small></h3>
+						<a href="https://plus-ultra.io/producto/geek-pack-xl/" target="_blank" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>GEEK PACK XL</b></a>
+						<h3>Valor: ₡40,000 colones.<br><small>($64.50 dólares)*</small></h3>
 						<div>
 							<p class="where">Exclusivo de la tienda en línea.</p>
-							<p><strong>Incluye:</strong><br>+ Set de postales exclusivas.<br>+ Camiseta oficial del evento.<br>+ Poster Premium y autógrafo Chumlee.<br>+ Poster Premium y autógrafo [actor de voz].<br>+ Regalia de los patrocinadores.<br>+ Acceso premium frente a tarima</p>
-							<p class="free">La compra de este producto le obsequia un acceso de cortesía a Con-X: Convención Geek</p>
+							<p><strong>Incluye:</strong><br>+ Set de postales exclusivas.<br>+ Camiseta oficial del evento.<br>+ Pase rápido a firma de autografos.<br>+ Poster Premium y autógrafo Chumlee.<br>+ Poster Premium y autógrafo [actor de voz].<br>+ Regalias de los patrocinadores.<br>+ Acceso premium frente a tarima</p>
+							<p class="free">Cada pack incluye 1 acceso a Con-X: Convención Geek.</p>
 						</div>
-						<a href="#" class="goplus" target="_blank">COMPRAR.</a>
+						<a href="https://plus-ultra.io/producto/geek-pack-xl/" class="goplus" target="_blank">COMPRAR.</a>
 					</div>
 				</div>
-				<p>(*) De momento, nuestro procesador de tarjetas de crédito y débito recibe el pago en moneda dólares únicamente, pedimos disculpas por los inconvenientes que esta situación pueda provocar.</p>
+				<h2>Autógrafos con invitados.</h2>
+				<p>Usted podrá adquirir un artículo oficial de Con-X: Convención Geek. Por su compra obtiene un autógrafo de cortesía o el combo autografo + fotografía con el invitado de su elección.</p>
+				<p>Por favor tome en cuenta que la Entrada General no incluye regalías ni autógrafos con los artitas invitados.</p>
+				<br><br>
+				<p>(*) Nuestro procesador de tarjetas de crédito y débito recibe el pago en moneda dólares únicamente, pedimos disculpas por los inconvenientes que esto pueda provocar.</p>
 			</div>
 		</div>
 		<div id="final">
@@ -555,39 +555,47 @@
 				<div id="bottomNav">
 					<div>
 						<h4>Sobre Con-X</h4>
-						<a href="#"><i class="fas fa-ticket-alt"></i>Boletos</a>
+						<a href="#boletos"><i class="fas fa-ticket-alt"></i>Boletos</a>
+<!--
 						<a href="#"><i class="fas fa-home"></i>¿Cómo llegar?</a>
 						<a href="#"><i class="fas fa-bus-alt"></i>Transporte</a>
-
+-->						
 						<h4>Invitados</h4>
-						<a href="#"><i class="fas fa-user-circle"></i>Invitado 1</a>
-						<a href="#"><i class="fas fa-user-circle"></i>Invitado 2</a>
-						<a href="#"><i class="fas fa-user-circle"></i>Invitado 3</a>						
+						<a href="#chum"><i class="fas fa-user-circle"></i>Chumlee.</a>
+						<a href="#"><i class="fas fa-user-circle"></i>[Actor de Doblaje]</a>
+						<a href="#"><i class="fas fa-user-circle"></i>[Cosplay]</a>
+						<a href="#"><i class="fas fa-user-circle"></i>[Comic Nacional]</a>
+						<a href="#"><i class="fas fa-user-circle"></i>[Cosplay Nacional]</a>
 					</div>
 					<div>
 						<h4>Información</h4>
+						<a href="#"><i class="fas fa-plane"></i>Tours Japón</a>
+<!--						
 						<a href="#"><i class="fas fa-store"></i>Stands</a>
 						<a href="#"><i class="fas fa-hands-helping"></i>Patrocinio</a>
 						<a href="#"><i class="fas fa-users"></i>Talentos</a>						
 						<a href="#"><i class="fas fa-newspaper"></i>Prensa</a>
-						<a href="#"><i class="fas fa-plane"></i>Tours Japón</a>
 						<a href="#"><i class="fas fa-phone"></i>Contacto</a>
-						
+-->						
 					</div>
 				</div>
 				<div id="patron">
 					<img src="/img/logos/cccr.jpg" alt="cccr">
+					<img src="/img/logos/masco.jpg" alt="masco">
 					<img src="/img/logos/cosplaner.jpg" alt="cosplanner">
 					<img src="/img/logos/nissimoo.jpg" alt="nissimoo">
 					<img src="/img/logos/moo.jpg" alt="moo gaming">
 					<img src="/img/logos/mex.jpg" alt="hacienda mexicana">
+					<img src="/img/logos/care-love.jpg" alt="care with love">
 					<img src="/img/logos/1820.jpg" alt="1820">
 					<img src="/img/logos/maruchan.jpg" alt="maruchan">
-<!--
 					<img src="/img/logos/nox.jpg" alt="Nox">
 					<img src="/img/logos/woki.jpg" alt="Woki">
+					<img src="/img/logos/pilsen.jpg" alt="pilsen">
+					<img src="/img/logos/uh.jpg" alt="u hispanoamericana">
+
+<!--
 					<img src="/img/logos/crunchyroll.jpg" alt="crunchyroll">
-					<img src="/img/logos/masco.jpg" alt="masco">
 -->					
 				</div>
 			</div>

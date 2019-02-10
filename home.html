@@ -7,8 +7,8 @@
 	<meta property="og:title" content="Con-X: Convención Geek - Costa Rica" />
 	<meta property="og:description" content="Los artistas del cine y la TV que siempre has querido conocer y el mejor concurso cosplay en el Centro de Convenciones de Costa Rica." />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
-	<meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+	<meta property="og:url" content="https://conx.fun/" />
+	<meta property="og:image" content="https://conx.fun/img/og.jpg" />
 	<link rel="icon" href="/favicon.png" type="image/png">
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,700" rel="stylesheet">
@@ -35,7 +35,7 @@
 		#indexNav {display: block; text-align: right; width: 80%; margin: 0 auto;}
 		#indexNav a {color: #FFF; text-decoration: none; margin: 0px 50px 0 0; font: 500 18px/100px 'Alegreya Sans';}
 		#indexNav a:hover {color: #ffb977;}
-		.upNav {color: #ffff00;}
+		.upNav {color: #ffff00 !important;}
 		.anim {animation: otros 1s; animation-duration: 3s;}
 		@keyframes logoIntro {from {width:0%; opacity: 0;} to {width: 80%; opacity: 1;}}
         @keyframes otros {0% {opacity: 0;} 50% {opacity: 0;} 100% {opacity: 1;}}
@@ -60,13 +60,13 @@
 		#carroviejo {width:409.48px; height:102.66px; background: url('../img/carroviejo.svg')no-repeat; position: relative; top:-725px; left: 0px;}
 		#pawnshop {width:698.57px; height:471.49px; background: url('../img/pawnshop.png')no-repeat; position: relative; top: -360px; left:calc(50% + 20px);}
 		#goku {width:160.33px; height:100.59px; position: relative; top:105px; left:100%; background:url('../img/goku.png') no-repeat; background-size: contain;}
-		#ship {width:555.03px; height:297.30px; position: relative; top:200px; left:calc(50% + 85px); background:url('../img/ship.svg') no-repeat;}
-		#shipshadow {width:555.03px; height:297.30px; position: relative; top:750px; left:calc(50% + 85px); background:url('../img/shipshadow.svg') no-repeat;}
-		#fogR {width:161.22px; height:126.50px; position: relative; top:110px; left:calc(50% + 575px); background:url('../img/fogR.png') no-repeat;}
-		#fogL {width:148.33px; height:91.55px; position: relative; top:0px; left:calc(50% - 0px); background:url('../img/fogL.png') no-repeat;}
+		#ship {width:194px; height:194px; position: relative; top:200px; left:calc(50% + 250px); background:url('../img/ship.png') no-repeat;}
+		#shipshadow {width:376px; height:128px; position: relative; top:595px; left:calc(50% + 140px); background:url('../img/shipshadow.png') no-repeat;}
+		#fogR {width:161.22px; height:126.50px; position: relative; top:270px; left:calc(50% + 575px); background:url('../img/fogR.png') no-repeat;}
+		#fogL {width:148.33px; height:91.55px; position: relative; top:160px; left:calc(50% - 0px); background:url('../img/fogL.png') no-repeat;}
 		#alina {width:197.66px; height:341.75px; position: relative; top:252px; left:calc(50% + 282px); background:url('../img/alina.png') no-repeat;}
 		#chumlee {position: relative; top:-740px; left:0;}
-		#reyero {position: relative; top:-500px; right:0;}
+		#reyero {position: relative; top:-280px; left:120%;}
 		#infomex {position: relative; top:-80px; left:0;}
 		.pop {background: #0078B5; font-size: 16px; font-weight: 300; display: flex; align-items: center; text-align: left; width: 500px; border-radius: 25px; padding: 20px;}
 		.pop img {flex-shrink: 0; border: 1px solid #FFF; margin-right: 20px;}
@@ -106,14 +106,12 @@
 			animation: rotate 25s linear infinite;}
 		#sportcar {width:198px; height:47px; background:url('../img/sportcar.svg') no-repeat; position: relative; top:-310px; left: -100%;
 			animation: leftToRight 25s linear infinite;}
-		#dune {width:158.96px; height:137.95px; background:url('../img/dune.png') no-repeat; position: relative; top:115px; left: -20%;
+		#dune {width:158.96px; height:137.95px; background:url('../img/dune.png') no-repeat; position: relative; top:375px; left: -20%;
 			animation: rotate 5s linear infinite;}
 		.slick-slider {width: 90%;} 
 		.slick-prev {left: 0; z-index: 100; background: #0078b5 url('../img/leftArrow.png') center center no-repeat;}
 		.slick-next {right: 0; z-index: 100; background: #0078b5 url('../img/rightArrow.png') center center no-repeat;}
-		.slick-prev, .slick-next {
-			font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 50px; height: 100%; padding: 0; cursor: pointer; border: none; outline: none; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%);
-		}
+		.slick-prev, .slick-next {font-size: 0; line-height: 0; position: absolute; top: 50%; display: block; width: 50px; height: 100%; padding: 0; cursor: pointer; border: none; outline: none; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%);}
 		.slick-slide {margin: 0 10px;}
 		.slick-slide img {width: 100%;}
 		.slick-slide a {color: #FFF; text-decoration:none;}
@@ -123,7 +121,7 @@
 		.cosplayStars .slick-slide {margin: 0 45px; height: 465px; }
 		.cosplayStars .slick-slide:nth-child(even) img {margin-top: 195px;}
 		.cosplayStars .slick-slide p {position: relative; top: -30px; right: 10%; text-align: end; font-size: 14px; font-weight: 500;}
-		#boletos {padding: 75px 0; background: #044c71; }
+		#boletos {padding: 75px 0; border-top: 2px solid #FFF;  }
 		#gen {display: flex; flex-direction: row; background: #FFF; color: #0076b5;}
 		#gen .ticketImg {background: url('../img/gen-bg.jpg'); width: 25%; min-width: 250px; margin: 0 25px 0 0; display: flex; align-items: center; justify-items: center;}
 		#genTxt {margin-right: 25px;}
@@ -131,7 +129,7 @@
 		.ticket {display:flex; flex-direction: column; width: 45%; min-width: 285px; background: #FFF; border: 2px solid #FFF; color: #0076b5; padding-bottom: 25px; margin-top: 35px;}
 		.ticket p, .ticket h3 { display: block; margin: 10px auto 10px;}
 		.ticket h3 {height: 50px; text-align: center;}
-		.ticket div {width: 85%; margin: 5px auto 25px; min-height: 305px;}	
+		.ticket div {width: 85%; margin: 5px auto 25px; min-height: 325px;}	
 		.ticketImg {display: block; text-align: center; color: #FFF; font: 700 28px/20px "Alegreya Sans"; text-decoration:none; padding:0px 0 25px; margin-bottom:20px;}
 		.reg .ticketImg {background: url('../img/reg-bg.jpg');}
 		.vip .ticketImg {background: url('../img/vip-bg.jpg');}
@@ -141,9 +139,8 @@
 		.goplus {width: 85%; margin: auto; position: relative; bottom: 0;}
 		.vip .goplus {background: #f88800 url('../img/money.png') left bottom no-repeat;}
 		.vip .goplus:hover {background: #faa237 url('../img/money.png') left bottom no-repeat;}
-		.reg .goplus {background: #299ed9; border-color:#299ed9; }
-		.reg .goplus:hover {background:#69b9e1; }
-
+		.reg .goplus {background: #299ed9 url('../img/money.png') left bottom no-repeat; border-color:#299ed9; }
+		.reg .goplus:hover {background:#69b9e1 url('../img/money.png') left bottom no-repeat; }
 		#final {background: #FFF; padding-top: 25px; border-top: 4px solid #0076b5;}
 		#final p {margin: 0; text-align: center; padding: 20px 0; background: #0076b5;}
 		#final .wrapper, #patron, #bottomNav, #bottomNav div {display: flex; flex-direction: row; flex-shrink: 0; flex-wrap: wrap; justify-content: space-around; align-items: center;}
@@ -191,6 +188,7 @@
 			#store {margin: 15px 0 30px;}
 			#indexNav {text-align: center;}
 			#chumlee {top:-760px;}
+			.ticket div {height: 350px;}
 		}
 		@media screen and (max-width:751px) {
 			#inicio {background-image: url('../img/convencion-anime.jpg'); background-size: unset;}
@@ -202,6 +200,7 @@
 			.pop {flex-direction: column; width: 450px; left: calc(50% - 245px) !important;}
 			.pop img {margin: 0px 0px 20px 0px;}
 			#bottomNav, #patron {width: 100%;}
+			.ticket div {height: 375px;}
 		}
 		@media screen and (max-width:546px) {
 			#logoSec{top: calc(50% + -200px);}
@@ -214,12 +213,20 @@
 			#indexNav {display: none;}
 			#nav {display: block !important; opacity: 1 !important;}
 			#chumlee {top: -975px;}
+			#freezer {height: 965px;}
 			#reyero {top:-560px;}
 			#infomex {top: -195px;}
 			.pop {width: 300px; left: calc(50% - 170px) !important;}
 			#cosplay h2 {font-size: 35px;}
 			.marco img {filter: contrast(100%) brightness(100%);}
+			#gen {flex-direction: column; align-items: center; width: 90%; margin: 0 auto; border: 2px solid #FFF;}
+			#gen .ticketImg {width: 100%; margin: 0px; padding: 0px;}
+			#gen .ticketImg img {margin: 15px auto;}
+			#genTxt {margin: 0 25px;}
+			#genTxt h3 {text-align: center;}
 			.light {opacity: 1;}
+			.ticket {width: 90%;}
+			.ticket div {height: initial;}
 		}
 	</style>
 	<script>
@@ -234,10 +241,8 @@
 			<li id="lg"><a href="#"><img src="/img/convencion-logo.png" alt="convencion anime comic"></a></li>
 			<li><a href="/">Inicio</a></li>
 			<li><a href="#chum">Invitados</a></li>
-			<li><a href="#wcs">WCS</a></li>
-			<li><a href="https://plus-ultra.io" target="_blank" class="upNav">Boletos</a></li>
-			<li><a href="#">Stands</a></li>
-			<li><a href="#">Contacto</a></li>
+			<li><a href="#wcs">WCS Costa Rica</a></li>
+			<li><a href="#boletos" class="upNav">Boletos</a></li>
 		</ul>
 	</nav>	
 	<div id="content-wrapper">
@@ -245,22 +250,20 @@
 			<nav id="indexNav">
 				<a href="#chum">Invitados</a>
 				<a href="#wcs">WCS Costa Rica</a>
-				<a href="#">Stands</a>
-				<a href="https://plus-ultra.io" target="_blank" class="upNav">Boletos</a>
-				<a href="#">Contacto</a>
+				<a href="#boletos" class="upNav">Boletos</a>
 			</nav>
 			<div id="logoSec">
 				<img id="conxLog" src="/img/conx-logo.png" alt="convención anime y comic costa rica">
 				<h2 class="anim">CONVENCIÓN DE CULTURA GEEK</h2>
 				<p class="anim">Domingo 5 de Mayo - 10am<br>Centro de Convenciones de Costa Rica<br>Entrada General: &cent;10,000 colones</p>
-				<a href="#" id="store" class="anim"><i class="fas fa-ticket-alt"></i> &nbsp;BOLETOS</a>
+				<a href="https://plus-ultra.io" target="_blank" id="store" class="anim"><i class="fas fa-ticket-alt"></i> &nbsp;BOLETOS</a>
 				<div id="mainSocial" class="anim">
 					<a href="https://www.facebook.com/conxcr/" target="_blank" class="fab fa-facebook-square"></a>
 					<a href="https://www.instagram.com/conxcr/" target="_blank" class="fab fa-instagram"></a>
-					<a href="https://www.youtube.com/channel/UCUMB1CzczAPzX72L1lP2BVw" class="fab fa-youtube"></a>
+					<a href="https://www.youtube.com/channel/UCUMB1CzczAPzX72L1lP2BVw" target="_blank" class="fab fa-youtube"></a>
 				</div>
 			</div>
-			<div id="mainCredits">Con-X: Convención Geek y WCS Costa Rica son propiedad de <a href="#" class="upNav">Plus Ultra!</a></div>
+			<div id="mainCredits">Con-X: Convención Geek y WCS Costa Rica son propiedad de <a href="https://plus-ultra.io" target="_blanck" class="upNav">Plus Ultra!</a></div>
 		</div>
 		<div class="scrollContent">
 			<div id="chum" class="scene">					
@@ -276,10 +279,8 @@
 						<h2>Austin "Chumlee" Russell</h2>
 						<p>Famoso por el show: <b>"El precio de la Historia"</b> de History Channel, es uno de los empleados y quizás el personaje más carismático de "Gold & Silver Pawn Shop" en Las Vegas. Su fama también lo ha convertido en uno de los meme más conocidos debido a la frase: "No lo sé Rick, parece falso." la cual en realidad nunca fue usada en la TV.</p>
 						<span>
-							<a href="#" class="fab fa-facebook-square"></a>
-							<a href="#" class="fab fa-instagram"></a>
-							<a href="#" class="fab fa-twitter"></a>
-							<a href="#" class="fab fa-youtube"></a>
+							<a href="https://www.facebook.com/officialchumlee/" target="_blank" class="fab fa-facebook-square"></a>
+							<a href="https://www.instagram.com/chumlee702/" target="_blank" class="fab fa-instagram"></a>
 						</span>
 					</div>
 				</div>
@@ -293,83 +294,9 @@
 							]);
 					var scene = new ScrollMagic.Scene({triggerElement: "#ferris", duration: 1200})
 						.setTween(reveal)
-						.reverse (false)
+//						.reverse (false)
 						.addTo(controller);
 				</script>					
-			</div>
-			<div id="freezer" class="scene">
-				<div id="goku"></div>
-				<div id="shipshadow"></div>
-				<div id="ship"></div>
-				<div id="fogR"></div>
-				<div id="fogL"></div>
-				<div id="dune"></div>
-				<div id="reyero" class="pop">
-					<img src="https://placeimg.com/214/291/people" alt="jjjs">
-					<div>
-						<h2>Gerardo Reyero</h2>
-						<p>Freezer uno de los villanos más poderosos de la serie Dragon Ball llega Costa Rica para conquistar el corazón de todos los asistentes a Con-X. Ven a disfrutar de un show espectacular a corgo de Gerardo Reyero, la voz oficial de Freezar y muchos otros personajes del cine y la Televisión como Ash Williams, Tuxedo Mask, Meta Knight, Capitanazo, Gardfield, Hellboy, Jarvan IV entre muchos más.</p>
-						<span>
-							<a href="#" class="fab fa-facebook-square"></a>
-							<a href="#" class="fab fa-instagram"></a>
-							<a href="#" class="fab fa-twitter"></a>
-							<a href="#" class="fab fa-youtube"></a>
-						</span>
-					</div>
-				</div>				
-				<script>
-					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 1200})
-						.setTween("#goku", 1, {left:'0%', width:'10px'})
-						.reverse (false)
-						.addTo(controller);					
-					var freezer = new TimelineMax()
-						.add([
-							TweenMax.fromTo("#ship", 150, {top: "-460px", opacity: 0}, {top: "200px", opacity: 1}),
-							TweenMax.fromTo("#shipshadow", 150, {opacity: 0.2}, {opacity: 1, delay: 70}),
-							TweenMax.fromTo(["#fogR", "#fogL" ], 0.5, {opacity: 0}, {opacity: 0.5, delay:120}),
-							TweenMax.fromTo(["#fogR", "#fogL" ], 1, {opacity: 0.5}, {opacity: 0, delay:150}),
-							TweenMax.fromTo("#reyero", 100, {left:"100%", opacity:0}, {left:"15%", opacity:1})
-							]);
-					var scene = new ScrollMagic.Scene({triggerElement: "#goku", duration: 900})
-						.setTween(freezer)
-						.reverse (false)
-						.addTo(controller);
-
-					var rotateDune = new TimelineMax({repeat: -1, yoyo: false})
-						.add(TweenMax.to("#dune", 20, {left: "0%", left: "120%", rotation: 0}));
-					var scene = new ScrollMagic.Scene({triggerElement: "#reyero", duration: 500, offset: 100 })
-					.setTween(rotateDune)
-                    .addTo(controller);
-				</script>
-			</div>
-			<div id="nicte" class="scene">
-				<div id="trigger"></div>
-				<div id="alina"></div>
-				<div id="infomex" class="pop">
-					<img src="https://placeimg.com/214/291/people" alt="jjjs">
-					<div>
-						<h2>Alina Nicte</h2>
-						<p>Desde México nos visita una animadora y locutora que se ha ganado el corazón de los aficionados en Costa Rica, no solo por su voz y sus canciones, si no también por el carisma y su forma tan especial de animar los eventos donde participa. Alina será la voz oficial de la final nacional de World Cosplay Summit y estará compartiendo el escenario junto a nuevos animadores costarricenses que se presentan en Con-X.</p>
-						<span>
-							<a href="#" class="fab fa-facebook-square"></a>
-							<a href="#" class="fab fa-instagram"></a>
-							<a href="#" class="fab fa-twitter"></a>
-							<a href="#" class="fab fa-youtube"></a>
-						</span>
-					</div>
-				</div>				
-				<script>
-					var alina = new TimelineMax()
-						.add([
-							TweenMax.fromTo("#infomex", 0.4, {left:"100%", opacity:0}, {left:"15%", opacity:1}),
-							TweenMax.fromTo("#alina", 1, {opacity: 0}, {opacity: 1} ),
-							]);					
-					var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 600})
-						.setTween(alina)
-						.reverse(false)
-//						.addIndicators({name: "freexer (duration: 600)"}) // add indicators (requires plugin)
-						.addTo(controller);					
-				</script>			
 			</div>
 			<div id="wcs">
 				<img id="wcslogo" src="/img/logo-wcs.png" alt="World Cosplay Summit Costa Rica">
@@ -396,9 +323,8 @@
 				<br>
 				<div class="wcsTxt">
 					<p>Y si deseas acompañar a los ganadores, puedes encontrar información sobre los tours a Japón que ya están disponibles y vivir la mejor eXperiencia junto a todo el equipo costarricense en <strong>WCS</strong>, el <strong>Pikachu outbreak 2019</strong> y <strong>Comiket</strong>.</p>
-					<p><a href="https://wcscostarica.com/#tourCos"><i class="fas fa-plane"></i>&nbsp;&nbsp;Tours WCS</a></p>						
+					<p><a href="https://wcscostarica.com/#tourCos" target="_blank"><i class="fas fa-plane"></i>&nbsp;&nbsp;Tours WCS</a></p>						
 				</div>
- 
 				<script>
 				var dancingLogo = new TimelineMax({repeat: -1, yoyo: true})
                     .add(TweenMax.to("#wcslogo", 0.3, {bottom: "+=5", left: "-=6", rotation: -3}))
@@ -413,105 +339,7 @@
                     .addTo(controller);
 				</script>
 			</div>
-			<div id="cosplay">
-				<div class="stars"></div>
-				<h2><i class="far fa-star"></i> Cosplay Rising Stars</h2>
-				<div class="cosplayStars">
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-				</div>
-				<h2><i class="fas fa-star"></i> Cosplay Super Novas</h2>
-				<div class="cosplayStars">
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-				</div>
-			</div>
-			<div id="graficos">
-				<div class="wrapper">
-					<h2>Artistas Gráficos</h2>
-					<div id="arteWrap">
-						<div class="arte">
-							<div class="marco">
-								<img src="/img/comic.jpg" alt="comic">
-							</div>
-							<p>Fulano de tal</p>
-							<div class="bulb"></div>
-							<div class="light"></div>
-							<div class="socialLink">
-								<a href="#" class="fab fa-facebook-square"></a>
-								<a href="#" class="fab fa-instagram"></a>
-								<a href="#" class="fab fa-twitter"></a>
-								<a href="#" class="fab fa-youtube"></a>
-							</div>
-						</div>
-						<div class="arte">
-							<div class="marco">
-								<img src="/img/comic.jpg" alt="comic">
-							</div>
-							<p>Fulano de tal</p>
-							<div class="bulb"></div>
-							<div class="light"></div>
-							<div class="socialLink">
-								<a href="#" class="fab fa-facebook-square"></a>
-								<a href="#" class="fab fa-instagram"></a>
-								<a href="#" class="fab fa-twitter"></a>
-								<a href="#" class="fab fa-youtube"></a>
-							</div>
-						</div>
-						<div class="arte">
-							<div class="marco">
-								<img src="/img/comic.jpg" alt="comic">
-							</div>
-							<p>Fulano de tal</p>
-							<div class="bulb"></div>
-							<div class="light"></div>
-							<div class="socialLink">
-								<a href="#" class="fab fa-facebook-square"></a>
-								<a href="#" class="fab fa-instagram"></a>
-								<a href="#" class="fab fa-twitter"></a>
-								<a href="#" class="fab fa-youtube"></a>
-							</div>
-						</div>
-						<div class="arte">
-							<div class="marco">
-								<img src="/img/comic.jpg" alt="comic">
-							</div>
-							<p>Fulano de tal</p>
-							<div class="bulb"></div>
-							<div class="light"></div>
-							<div class="socialLink">
-								<a href="#" class="fab fa-facebook-square"></a>
-								<a href="#" class="fab fa-instagram"></a>
-								<a href="#" class="fab fa-twitter"></a>
-								<a href="#" class="fab fa-youtube"></a>
-							</div>
-						</div>
-						<div class="arte">
-							<div class="marco">
-								<img src="/img/comic.jpg" alt="comic">
-							</div>
-							<p>Fulano de tal</p>
-							<div class="bulb"></div>
-							<div class="light"></div>
-							<div class="socialLink">
-								<a href="#" class="fab fa-facebook-square"></a>
-								<a href="#" class="fab fa-instagram"></a>
-								<a href="#" class="fab fa-twitter"></a>
-								<a href="#" class="fab fa-youtube"></a>
-							</div>
-						</div>					
-					</div>
-				</div>
-			</div>
-		</div>
+		</div> <!-- End Scroll Content -->
 		<div id="boletos">
 			<div class="wrapper">
 				<h2>Entrada General:</h2>
@@ -522,35 +350,34 @@
 						<h3>Valor: ₡10,000 colones.</h3>
 						<p>La entrada general se pondrá <u>a la venta el mismo día del evento</u> y tendrá un valor de ₡10,000.00 colones para todo público. La compra se podrá realizar con tarjeta de crédito o efectivo. Recomendamos a los asistentes llevar el monto completo y adquirir sus boletos únicamente en las boleterías oficiales dentro del CCCR.</p>
 						<p class="free"><strong>Entrada gratis para:</strong><br>- Niños menores de 12 años.<br>- Adultos mayores.<br>- Personas con discapacidad.</p>
-						</p>				 
 					</div>
 				</div>
 				<h2>Paquetes Promocionales Con-X.</h2>
-				<p><u>Ahorre dinero comprando los productos promocionales de Con-X: Convención Geek</u>, a través de nuestra nueva tienda en línea: <a href="https//plus-ultra.io" target="_blank" class="upNav">Plus-Ultra.io</a>, allí usted podrá adquirir todos los artículos oficiales de la convención y comprar con toda comodidad desde su casa u oficina.</p> 
+				<p><u>Ahorre dinero comprando los productos promocionales de Con-X: Convención Geek</u>, a través de nuestra nueva tienda en línea: <a href="https://plus-ultra.io" target="_blank" class="upNav">Plus-Ultra.io</a>, allí usted podrá adquirir todos los artículos oficiales de la convención y comprar con toda comodidad desde su casa u oficina.</p> 
 				<p>Encuentre también figuras y artículos exclusivos 100% originales e importados desde el Japón, ¡todo a muy buenos precios!.</p>
 				<div id="tickets">					
 					<div class="ticket reg">
-						<a href="#" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>X PACK</b></a>
-						<h3>Valor: ₡10,000 colones.<br><small>($16.50 dólares)*</small></h3>
+						<a href="https://plus-ultra.io/producto/x-pack/" target="_blank" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>X PACK</b></a>
+						<h3>Valor: ₡10,000 colones.<br><small>($16.15 dólares)*</small></h3>
 						<div>
 							<p class="where">Exclusivo de la tienda en línea.</p>
 							<p><strong>Incluye:</strong><br>+ Set de 3 postales exclusivas, diseñadas por reconocidos artitas e ilustradores costarricenses con reconocimiento internacional.<br> Todas son: <b>100% coleccionables</b>.</p>
-							<p class="free">La compra de este producto le obsequia un acceso de cortesía a Con-X: Convención Geek</p>
+							<p class="free">Cada pack incluye 1 acceso a Con-X: Convención Geek.</p>
 						</div>
-						<a href="#" class="goplus" target="_blank">COMPRAR</a>
+						<a href="https://plus-ultra.io/producto/x-pack/" target="_blank" class="goplus" target="_blank">COMPRAR</a>
 					</div>
 					<div class="ticket vip">
-						<a href="#" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>GEEK PACK XL</b></a>
-						<h3>Valor: ₡40,000 colones.<br><small>($66.00 dólares)*</small></h3>
+						<a href="https://plus-ultra.io/producto/geek-pack-xl/" target="_blank" class="ticketImg"><img src="/img/x.png" alt="entrada general"><b>GEEK PACK XL</b></a>
+						<h3>Valor: ₡40,000 colones.<br><small>($64.50 dólares)*</small></h3>
 						<div>
 							<p class="where">Exclusivo de la tienda en línea.</p>
-							<p><strong>Incluye:</strong><br>+ Set de postales exclusivas.<br>+ Camiseta oficial del evento.<br>+ Poster Premium y autógrafo Chumlee.<br>+ Poster Premium y autógrafo [actor de voz].<br>+ Regalia de los patrocinadores.<br>+ Acceso premium frente a tarima</p>
-							<p class="free">La compra de este producto le obsequia un acceso de cortesía a Con-X: Convención Geek</p>
+							<p><strong>Incluye:</strong><br>+ Set de postales exclusivas.<br>+ Camiseta oficial del evento.<br>+ Pase rápido a firma de autografos.<br>+ Poster Premium y autógrafo Chumlee.<br>+ Poster Premium y autógrafo [actor de voz].<br>+ Regalias de los patrocinadores.<br>+ Acceso premium frente a tarima</p>
+							<p class="free">Cada pack incluye 1 acceso a Con-X: Convención Geek.</p>
 						</div>
-						<a href="#" class="goplus" target="_blank">COMPRAR.</a>
+						<a href="https://plus-ultra.io/producto/geek-pack-xl/" class="goplus" target="_blank">COMPRAR.</a>
 					</div>
 				</div>
-				<p>(*) De momento, nuestro procesador de tarjetas de crédito y débito recibe el pago en moneda dólares únicamente, pedimos disculpas por los inconvenientes que esta situación pueda provocar.</p>
+				<p>(*) Nuestro procesador de tarjetas de crédito y débito recibe el pago en moneda dólares únicamente, pedimos disculpas por los inconvenientes que esto pueda provocar.</p>
 			</div>
 		</div>
 		<div id="final">
@@ -558,43 +385,32 @@
 				<div id="bottomNav">
 					<div>
 						<h4>Sobre Con-X</h4>
-						<a href="#"><i class="fas fa-ticket-alt"></i>Boletos</a>
-						<a href="#"><i class="fas fa-home"></i>¿Cómo llegar?</a>
-						<a href="#"><i class="fas fa-bus-alt"></i>Transporte</a>
+						<a href="#boletos"><i class="fas fa-ticket-alt"></i>Boletos</a>
 
 						<h4>Invitados</h4>
-						<a href="#"><i class="fas fa-user-circle"></i>Invitado 1</a>
-						<a href="#"><i class="fas fa-user-circle"></i>Invitado 2</a>
-						<a href="#"><i class="fas fa-user-circle"></i>Invitado 3</a>						
+						<a href="#chum"><i class="fas fa-user-circle"></i>Chumlee.</a>
+						<a href="#"><i class="fas fa-user-circle"></i>[Actor de Doblaje]</a>
+						<a href="#"><i class="fas fa-user-circle"></i>[Cosplay]</a>
+						<a href="#"><i class="fas fa-user-circle"></i>[Comic Nacional]</a>
+						<a href="#"><i class="fas fa-user-circle"></i>[Cosplay Nacional]</a>
+
 					</div>
 					<div>
 						<h4>Información</h4>
-						<a href="#"><i class="fas fa-store"></i>Stands</a>
-						<a href="#"><i class="fas fa-hands-helping"></i>Patrocinio</a>
-						<a href="#"><i class="fas fa-users"></i>Talentos</a>						
-						<a href="#"><i class="fas fa-newspaper"></i>Prensa</a>
-						<a href="#"><i class="fas fa-plane"></i>Tours Japón</a>
-						<a href="#"><i class="fas fa-phone"></i>Contacto</a>
-						
+						<a href="https://wcscostarica.com/#tourCos" target="_blank"><i class="fas fa-plane"></i>Tours Japón</a>
 					</div>
 				</div>
 				<div id="patron">
-					<img src="/img/logos/cccr.jpg" alt="cccr">
 					<img src="/img/logos/cosplaner.jpg" alt="cosplanner">
 					<img src="/img/logos/nissimoo.jpg" alt="nissimoo">
 					<img src="/img/logos/moo.jpg" alt="moo gaming">
 					<img src="/img/logos/mex.jpg" alt="hacienda mexicana">
 					<img src="/img/logos/1820.jpg" alt="1820">
 					<img src="/img/logos/maruchan.jpg" alt="maruchan">
-<!--
 					<img src="/img/logos/nox.jpg" alt="Nox">
-					<img src="/img/logos/woki.jpg" alt="Woki">
-					<img src="/img/logos/crunchyroll.jpg" alt="crunchyroll">
-					<img src="/img/logos/masco.jpg" alt="masco">
--->					
 				</div>
 			</div>
-			<p>Derechos Reservados &copy; 2019 - Producciones Plus Ultra de Costa Rica S.A.</p>
+			<p>Derechos Reservados &copy; 2019 - Producciones Plus Ultra de Costa Rica, S.A.</p>
 		</div>
 	</div>
 </body>
