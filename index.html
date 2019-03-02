@@ -40,6 +40,7 @@
 		@keyframes logoIntro {from {width:0%; opacity: 0;} to {width: 80%; opacity: 1;}}
         @keyframes otros {0% {opacity: 0;} 50% {opacity: 0;} 100% {opacity: 1;}}
 		#store, #wcs p a, .goplus {display: inline-block; background-image: linear-gradient(#ff9600, #e25a00); border:1px solid #e08400; border-radius: 10px; text-align: center; color: #FFF; text-decoration: none; font: 400 22px/45px "Alegreya Sans"; width: 180px; margin: 20px 0 45px; padding-top: 2px; }
+		#store:hover, #wcs p a:hover, .goplus:hover {background-image: linear-gradient(#e78803, #be4f05); border:1px solid #e08400;}
 		#mainSocial a {color: #FFF; text-decoration: none; font-size: 35px; margin: 0 10px;}
 		#mainSocial a:hover {color: rgb(182, 232, 241);}
 		#inicio p, #mainSocial a, #inicio h3 {text-shadow:2px 2px 0px rgba(0, 0, 0, 0.2)/*, 3px 0px 6px #081153*/;}
@@ -72,7 +73,6 @@
 		#pug3{float: left; background: url('../img/pugoffka-costa-rica.jpg') bottom right no-repeat; background-size:contain;  width: 49%; height: 870px;}
 		#pugGal{display: block; margin: 35px auto 25px; text-align: center;}
 		#plinks {text-align: center;}
-
 		#goku {width:160.33px; height:100.59px; position: relative; top:105px; left:100%; background:url('../img/goku.png') no-repeat; background-size: contain;}
 		#ship {width:194px; height:194px; position: relative; top:200px; left:calc(50% + 250px); background:url('../img/ship.png') no-repeat;}
 		#shipshadow {width:376px; height:128px; position: relative; top:595px; left:calc(50% + 140px); background:url('../img/shipshadow.png') no-repeat;}
@@ -149,6 +149,9 @@
 		.reg .ticketImg {background: url('../img/reg-bg.jpg');}
 		.vip .ticketImg {background: url('../img/vip-bg.jpg');}
 		.free {padding: 20px; background: #dbf6ff;}
+		.nota {font-style: italic;}
+		.btn-orange {background-image: linear-gradient(#ff9600, #e25a00); font-style: normal; color: white; border-radius: 5px; padding: 5px; font-size: 0.7em; text-decoration: none; font-weight: 700;}
+		.btn-orange:hover {background-image: linear-gradient(#e78803, #be4f05);}
 		.ticketImg img {display: block; margin: 0 auto; margin: 35px auto 25px;}
 		.ticketImg b {text-shadow:2px 0px 2px rgba(0, 0, 0, 0.5), 2px 0px 2px #081153}
 		.goplus {width: 85%; margin: auto; position: relative; bottom: 0;}
@@ -575,6 +578,7 @@
 					<div id="genTxt">
 						<h3>Valor: ₡10,000 colones.</h3>
 						<p>La entrada general se pondrá <u>a la venta el mismo día del evento</u> y tendrá un valor de ₡10,000.00 colones para todo público. La compra se podrá realizar con tarjeta de crédito o efectivo. Recomendamos a los asistentes llevar el monto completo y adquirir sus boletos únicamente en las boleterías oficiales dentro del CCCR.</p>
+						<p class="nota">Tome en cuenta que la entrada general no incluye el autógrafo o fotografías con los invitados, pero también podrán ser adquiridos el mismo día del evento, o a través del siguiente enlace: <a href="" class="btn-orange">Combo Chumlee</a></p>
 						<p class="free"><strong>Entrada gratis para:</strong><br>- Niños menores de 12 años.<br>- Adultos mayores.<br>- Personas con discapacidad.</p>
 					</div>
 				</div>
@@ -604,8 +608,9 @@
 					</div>
 				</div>
 				<h2>Autógrafos con invitados.</h2>
-				<p>Usted podrá adquirir un artículo oficial de Con-X: Convención Geek. Por su compra obtiene un autógrafo de cortesía o el combo autografo + fotografía con el invitado de su elección.</p>
-				<p>Por favor tome en cuenta que la Entrada General no incluye regalías ni autógrafos con los artitas invitados.</p>
+				<p>Para obtener el autografo de los invitados, usted podrá adquirir un artículo oficial de Con-X: Convención Geek. Por su compra obtiene un autógrafo de cortesía o el combo autógrafo + fotografía con el invitado de su elección.</p>
+				<p>Para su comodidad, puede adquirir el combo de autógrafo + fotografía a través del siguiente enlace: <a href="#" class="btn-orange">Combo Chumlee</a></p>
+				<p>Por favor tome en cuenta que la Entrada General no incluye regalías ni autógrafos con los artistas invitados, únicamente el Geek Pack XL incluye el combo autógrafo + foto con los invitados.</p>
 				<br><br>
 				<p>(*) Nuestro procesador de tarjetas de crédito y débito recibe el pago en moneda dólares únicamente, pedimos disculpas por los inconvenientes que esto pueda provocar.</p>
 			</div>
