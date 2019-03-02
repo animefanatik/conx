@@ -59,6 +59,20 @@
 		#tower{width:232px; height:269px; background:url('../img/tower.svg') no-repeat; position: relative; top:490px; left: calc(50% - 800px);}
 		#carroviejo {width:409.48px; height:102.66px; background: url('../img/carroviejo.svg')no-repeat; position: relative; top:-725px; left: 0px;}
 		#pawnshop {width:698.57px; height:471.49px; background: url('../img/pawnshop.png')no-repeat; position: relative; top: -360px; left:calc(50% + 20px);}
+		#pug {background:#0b0e15;}
+		#pugWrap{width:100%; max-width:1200px; margin: 0 auto; display: block; overflow: hidden;}
+		#pug1, #pug2{float: right; width: 50%;}
+		#pug1{margin-top: 130px;}
+		#pug1 h1 {margin: 0;}
+		#pug1 small {color:#96e1f1; font-style: italic;}
+		#pug2{margin-top: 15px;}
+		#pug2 .socialLink {margin-top: 85px;}
+		#pug2 a {color: #FFF; text-decoration: none; font-size: 24px; margin: 0 5px;}
+		#pug2 a:hover{color: #c8c8c8}
+		#pug3{float: left; background: url('../img/pugoffka-costa-rica.jpg') bottom right no-repeat; background-size:contain;  width: 49%; height: 870px;}
+		#pugGal{display: block; margin: 35px auto 25px; text-align: center;}
+		#plinks {text-align: center;}
+
 		#goku {width:160.33px; height:100.59px; position: relative; top:105px; left:100%; background:url('../img/goku.png') no-repeat; background-size: contain;}
 		#ship {width:194px; height:194px; position: relative; top:200px; left:calc(50% + 250px); background:url('../img/ship.png') no-repeat;}
 		#shipshadow {width:376px; height:128px; position: relative; top:595px; left:calc(50% + 140px); background:url('../img/shipshadow.png') no-repeat;}
@@ -74,14 +88,15 @@
 		.pop p {margin: 0;}
 		.pop span, .socialLink {display: flex; margin-top: 20px; flex-direction: row; justify-content: center;}
 		.pop a {display: block; font-size: 35px; text-decoration: none; color: #FFF;font-weight: 300; margin: 0 10px;}
+		.pop a:hover { color: #e1e1e1;}
 		.pop .face {background: url('../img/facebook.svg') center no-repeat;}
 		.pop .inst {background: url('../img/instagram.svg') center no-repeat;}
 		.pop .twit {background: url('../img/twitter.svg') center no-repeat;}
 		.pop .tube {background: url('../img/youtube.svg') center no-repeat;}
 		#cosplay {padding-bottom: 75px; background:#0076b0 url('../img/stars.png'); border-top:2px solid #FFF; border-bottom:2px solid #FFF;}
-		#cosplay h2, #graficos h2 {font-size: 50px; font-weight: 500; margin: 0px auto 50px; text-align: center;}
-		#cosplay h2 {margin-top: 75px;}
-		#cosplay h2:first-of-type{margin-top: 0px;}
+		.imgTitle, #graficos h2 {font-size: 50px; font-weight: 500; margin: 0px auto 50px; text-align: center;}
+		.imgTitle {margin-top: 75px; display: block;}
+		.imgTitle:first-of-type{margin-top: 0px;}
 		#cosplay, #graficos .wrapper {padding-top:80px;}
 		#graficos {background:#a4ddf3 url('../img/museum.jpg') center fixed no-repeat; background-size:cover; }
 		#graficos h2 {color: #0078B5}
@@ -115,12 +130,12 @@
 		.slick-slide {margin: 0 10px;}
 		.slick-slide img {width: 100%;}
 		.slick-slide a {color: #FFF; text-decoration:none;}
-		.cosplayStars.slick-slider {background: none; margin: 0 auto;}
+		.cosplayStars.slick-slider {background: none; margin: 0 auto; max-width: 1050px;}
 		.cosplayStars .slick-prev {background: #0076b0 url('../img/leftArrow.png') center center no-repeat;}
 		.cosplayStars .slick-next {background: #0076b0 url('../img/rightArrow.png') center center no-repeat;}
 		.cosplayStars .slick-slide {margin: 0 45px; height: 465px; }
 		.cosplayStars .slick-slide:nth-child(even) img {margin-top: 195px;}
-		.cosplayStars .slick-slide p {position: relative; top: -30px; right: 10%; text-align: end; font-size: 14px; font-weight: 500;}
+		.cosplayStars .slick-slide p {position: relative; top: -30px; right: 10%; text-align: end; font-size: 20px; font-weight: 500;}
 		#boletos {padding: 75px 0; }
 		#gen {display: flex; flex-direction: row; background: #FFF; color: #0076b5;}
 		#gen .ticketImg {background: url('../img/gen-bg.jpg'); width: 25%; min-width: 250px; margin: 0 25px 0 0; display: flex; align-items: center; justify-items: center;}
@@ -180,6 +195,9 @@
 			#inicio h2 {font-size: 23px; margin: 10px;}
 			#inicio p {margin: 10px; font-size: 23px; line-height: 33px;}
 			#store {margin: 15px 0 30px;}
+			#pug {padding-bottom:35px; }
+			#pug3 {width: 50%}
+			#pug2, #pug1 {width:40%; margin-right:25px;}			
 		}
 		@media screen and (max-width:970px) {
 			#logoSec img {width: 300px;}
@@ -189,6 +207,13 @@
 			#indexNav {text-align: center;}
 			#chumlee {top:-760px;}
 			.ticket div {height: 350px;}
+			#pug {padding: 50px;}
+			#pugWrap {display: flex; flex-direction: column; align-items: center;}
+			#pug3 {order: 2; width: 60%; height: 635px; background-size: cover; background-position: center top;}
+			#pug2, #pug1 {width: 90%;}
+			#pug2 {margin: 0; order: 3}
+			#pug1 {margin:0; order: 1;}
+
 		}
 		@media screen and (max-width:751px) {
 			#inicio {background-image: url('../img/convencion-anime.jpg'); background-size: unset;}
@@ -201,6 +226,7 @@
 			.pop img {margin: 0px 0px 20px 0px;}
 			#bottomNav, #patron {width: 100%;}
 			.ticket div {height: 375px;}
+			#pug3 {width: 90%;}
 		}
 		@media screen and (max-width:546px) {
 			#logoSec{top: calc(50% + -200px);}
@@ -217,6 +243,8 @@
 			#reyero {top:-560px;}
 			#infomex {top: -195px;}
 			.pop {width: 300px; left: calc(50% - 170px) !important;}
+			#pug {padding: 15px;}
+			#pug3 {width: 100%; height: 450px;}
 			#cosplay h2 {font-size: 35px;}
 			.marco img {filter: contrast(100%) brightness(100%);}
 			#gen {flex-direction: column; align-items: center; width: 90%; margin: 0 auto; border: 2px solid #FFF;}
@@ -232,25 +260,11 @@
 	<script>
 		var controller = new ScrollMagic.Controller();
 	</script>	
-	<!-- Facebook Pixel Code -->
-	<script>
-		!function(f,b,e,v,n,t,s)
-		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-		n.queue=[];t=b.createElement(e);t.async=!0;
-		t.src=v;s=b.getElementsByTagName(e)[0];
-		s.parentNode.insertBefore(t,s)}(window, document,'script',
-		'https://connect.facebook.net/en_US/fbevents.js');
-		fbq('init', '794677347572234');
-		fbq('track', 'PageView');
-	</script>
-	<noscript><img height="1" width="1" style="display:none"
-		src="https://www.facebook.com/tr?id=794677347572234&ev=PageView&noscript=1"
-	/></noscript>
-	<!-- End Facebook Pixel Code -->
 </head>
 <body>
+		<noscript><img height="1" alt="facebook" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=794677347572234&ev=PageView&noscript=1"
+		/></noscript>
 	<nav id="nav">
 		<input class="trigger" type="checkbox" id="mainNavButton">
 		<label for="mainNavButton" onclick>Menu</label>
@@ -396,6 +410,56 @@
 						.addTo(controller);					
 				</script>			
 			</div>
+			<div id="pug">
+				<div id="pugWrap">
+					<div id="pug3">
+						
+					</div>
+					<div id="pug1">
+						<h1>Cosplay Internacional: PUGOFFKA</h1>
+						<small>“Salida como de un cuento gótico, desborda talento por cada lugar donde pasa. Su mirada, puede convertir a otros cosplayers en demonios, bestias, ángeles o dioses...”</small>
+					</div>
+					<div id="pug2">
+						<p>Desde Ucrania, llega a Costa Rica para ser la juez internacional de World Cosplay Summit durante la final nacional y para compartir buenos momentos junto a los asistentes a Con-X: Convención Geek.</p>
+						<p>Si te gusta el arte del cosplay y la fotografiía, esta es la oportunidad de conocer y aprender junto a una de las cosplayers y fotografas más espectaculares del mundo, en un taller especializado de Fotografía Cosplay que estaremos anunciando proximamente.</p>
+						<p>Además, los  sueños de algunos pocos se harán realidad y podrán difrutar de una sesión exclusiva, frente al lente y el talento de quien ha fotografiado a los cosplayers más famosos e influyentes en la actualidad.</p>
+						<div id="pugGal">
+								<a href="/img/foto/pugoffka-01.jpg" data-lightbox="Pugoffka"><img src="/img/th-pugoffka-01.jpg" alt="Pugoffka"></a>
+								<a href="/img/foto/pugoffka-02.jpg" data-lightbox="Pugoffka"><img src="/img/th-pugoffka-02.jpg" alt="Pugoffka"></a>
+								<a href="/img/foto/pugoffka-03.jpg" data-lightbox="Pugoffka"><img src="/img/th-pugoffka-03.jpg" alt="Pugoffka"></a>
+								<a href="/img/foto/pugoffka-04.jpg" data-lightbox="Pugoffka"><img src="/img/th-pugoffka-04.jpg" alt="Pugoffka"></a>
+								<a href="/img/foto/enji-night.jpg" data-lightbox="Pugoffka"><img src="/img/th-enji-night.jpg" alt="Enji Night"></a>
+								<a href="/img/foto/leon-chiro.jpg" data-lightbox="Pugoffka"><img src="/img/th-leon-chiro.jpg" alt="Leon Chiro"></a>
+								<a href="/img/foto/reika-arikawa.jpg" data-lightbox="Pugoffka"><img src="/img/th-reika-arikawa.jpg" alt="Reika Arikawa"></a>
+								<a href="/img/foto/stella-chu.jpg" data-lightbox="Pugoffka"><img src="/img/th-stella-chu.jpg" alt="Stella Chu"></a>
+						</div>
+						<div id="plinks">
+							<p>Sigue a Pugoffka en:</p> 
+							<span>
+								<a href="https://www.facebook.com/pugoffka.sama/" class="fab fa-facebook-square"></a>
+								<a href="https://www.instagram.com/pugoffka_sama/" class="fab fa-instagram"></a>
+								<a href="https://www.deviantart.com/pugoffka-sama" class="fab fa-deviantart"></a>
+								<a href="https://twitter.com/PugoffkaSama" class="fab fa-twitter"></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="cosplay">
+				<img src="/img/rising.png" alt="Cosplay Rising Stars" class="imgTitle">
+				<div class="cosplayStars">
+						<div class="cosplayer"><img src="/img/karlita.png" alt="Karlita Cosplay"><p>Karlita Cosplay</p></div>
+						<div class="cosplayer"><img src="/img/kevin-cosplay.png" alt="Kevin TR Cosplay"><p>Kevin TR Cosplay</p></div>
+						<div class="cosplayer"><img src="/img/zera.png" alt="Zera Shigeru"><p>Zera Shigeru</p></div>
+
+				</div>
+				<img src="/img/super.png" alt="Cosplay Super Novas" class="imgTitle">
+				<div class="cosplayStars">
+						<div class="cosplayer"><img src="/img/mary-magika.png" alt="Mary Magika"><p>Mary Magika</p></div>
+						<div class="cosplayer"><img src="/img/richard-vargas.png" alt="Richard Vargas"><p>Richard Vargas</p></div>
+						<div class="cosplayer"><img src="/img/ariela-quiros.png" alt="Ariela Quiros"><p>Ariela Quiros</p></div>
+				</div>
+			</div>
 			<div id="wcs">
 				<img id="wcslogo" src="/img/logo-wcs.png" alt="World Cosplay Summit Costa Rica">
 				<div class="wcsTxt">
@@ -437,27 +501,6 @@
                     .setTween(dancingLogo)
                     .addTo(controller);
 				</script>
-			</div>
-			<div id="cosplay">
-				<div class="stars"></div>
-				<h2><i class="far fa-star"></i> Cosplay Rising Stars</h2>
-				<div class="cosplayStars">
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer3.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-				</div>
-				<h2><i class="fas fa-star"></i> Cosplay Super Novas</h2>
-				<div class="cosplayStars">
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-						<div class="cosplayer"><img src="/img/cosplayer2.png" alt="cosplay"><p>Nana Kuronoma</p></div>
-				</div>
 			</div>
 			<div id="graficos">
 				<div class="wrapper">

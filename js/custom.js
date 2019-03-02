@@ -13,13 +13,15 @@ $(document).on('ready', function() {
         adaptiveHeight: true,        
         variableWidth: true,
         slidesToScroll: 1,
-        initialSlide: 1,
+        initialSlide: 1
     });
     $(".cosplayStars" ).slick({
         adaptiveHeight: true,        
         variableWidth: true,
         slidesToScroll: 1,
         initialSlide: 1,
+        centerMode: true,
+        infinite: true,
     });
 
     $(".light").hover(function() {
